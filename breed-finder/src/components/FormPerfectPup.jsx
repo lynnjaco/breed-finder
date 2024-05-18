@@ -57,7 +57,9 @@ export default function FormPerfectPup () {
                 <input type="radio" name="powerful" value="Powerful"/>
                 <input type="radio" name="compassionate" value="Compassionate"/>
 
+                <input type="submit" value="Submit"/>
             </form>
+
         </>
     )
 }
