@@ -15,6 +15,8 @@ export default function FormFamily () {
                 <p>Do you already have pets?</p>
                 <input type="radio" name="yes_pets" value="Yes"></input>
                 <input type="radio" name="no_pets" value="No"></input>
+                
+                <input type="submit" value="Submit"/>
             </form>
         </>
     )
