@@ -12,7 +12,7 @@ export default function FormHomeInfo () {
                     <input type="radio" name="house" value="House"/>
                     <input type="radio" name="mobileHome" value="Mobile Home/RV"/>
                     <input type="radio" name="tinyHome" value="Tiny Home"/>
-                    <input type="radio" name="apartmentCondo" value="Apartment/Condo"/>
+                    <input type="radio" name="ranch" value="Ranch/Farm"/>
 
                 <label>Which environment best describes where you live?</label>
                     <input type="radio" name="rural" value="Rural/Remote"/>
@@ -21,15 +21,7 @@ export default function FormHomeInfo () {
 
                 <label>Does your home have any size restrictions for dogs?</label>
                     <input type="radio" name="yes_restrictions" value="Yes"/>
-                        <select name="Weight Limit">
-                            <option value="20">20 lbs or Less</option>
-                            <option value="30">30 lbs or Less</option>
-                            <option value="40">40 lbs or Less</option>
-                            <option value="50">50 lbs or Less</option>
-                            <option value="60">60 lbs or Less</option>
-                            <option value="70">70 lbs or Less</option>
-                            <option value="80">80 lbs or Less</option>
-                        </select>
+                        <input type="number" name="max-weight" placeholder="Max Permitted Weight" min="1" max="200"/>
                     <input type="radio" name="no_restrictions" value="No"/>
                 <input type="submit" value="Next"/>
             </form>
