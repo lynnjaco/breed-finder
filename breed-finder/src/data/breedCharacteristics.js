@@ -5,7 +5,7 @@ export const dogCharacteristics = {
     friendly: [
       "Friendly", "Sociable", "Companionable", "People-Oriented", "Amiable", "Outgoing", "Good-natured", "Easygoing"
     ],
-    trainable: [
+    intelligent: [
       "Intelligent", "Trainable", "Quick", "Bright", "Clever", "Inquisitive", "Receptive", "Responsive", "Obedient"
     ],
     loyal: [
@@ -26,7 +26,7 @@ export const dogCharacteristics = {
     independent: [
       "Independent", "Aloof", "Reserved", "Dignified", "Proud"
     ],
-    curios: [
+    curious: [
       "Curious", "Inquisitive", "Eager", "Keen"
     ],
     powerful: [
@@ -38,7 +38,7 @@ export const dogCharacteristics = {
     protective: [
       "Territorial", "Suspicious", "Watchful", "Vigilant", "Protective"
     ],
-    spunky: [
+    feisty: [
       "Mischievous", "Feisty", "Spunky", "Vocal"
     ],
     compassionate: [
@@ -54,4 +54,3 @@ export const dogCharacteristics = {
       "Sensitive", "Trusting", "Cautious"
     ]
   };
-  
