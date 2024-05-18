@@ -12,6 +12,7 @@ export default function FormIntro () {
                 <label>Location</label>
                 <input type="text" placeholder="Zip Code"/>
             </form>
+            <input type="submit" value="Next"/>
         </>
     )
 }
