@@ -8,15 +8,41 @@ function App() {
 
   const [allDogBreeds, setAllDogBreeds] = useState([]);
   const [temperList, setTemperList] = useState([]);
+  const [userResponse, setUserResponse] = useState(initialResponse);
 
-  // useEffect(() => {
-  //   getAllDogsList().then(res => setAllDogBreeds(res.map( obj => obj.name)))
-  //   getAllDogsList().then( res => {
-  //     const list = res.map(obj => obj.temperament).join(", ").split(", ");
-  //     const uniqueTemperList = list.filter( (item, index) => list.indexOf(item) === index);
-  //     setTemperList(uniqueTemperList);
-  // })
-  // }, [])
+  const initialResponse = {
+    intro: {
+      name: "",
+      email: "",
+      age: "",
+      zipCode: ""  
+    },
+    homeInfo: {
+      dwelling: "",
+        environment: "",
+        sizeRestriction: ""  
+    },
+    household: {
+      quantity: "",
+        youngChildren: "",
+        allergies: "",
+        otherPets: {
+          dog: "",
+          cat: "",
+          bird: "",
+          rodent: "",
+          livestock: ""  
+        }
+    },
+    experience: {
+      pastDogs: "",
+      trainingAbility: ""
+    },
+    perfectPup: {
+      mostDesiredTrait: "",
+      leastDesiredTrait: ""
+    }
+  }
 
   return (
     <>
