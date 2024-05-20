@@ -21,6 +21,7 @@ export default function FormFamily () {
                     <input type="checkbox" name="cat" value="Cat(s)"/>
                     <input type="checkbox" name="bird" value="Bird(s)"/>
                     <input type="checkbox" name="rodent" value="Rodent(s)"/>
+                    <input type="checkbox" name="livestock" value="Livestock"/>
                 <input type="radio" name="no_pets" value="No"></input>
 
                 <input type="submit" value="Submit"/>
