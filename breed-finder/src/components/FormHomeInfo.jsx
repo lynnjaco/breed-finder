@@ -12,7 +12,7 @@ export default function FormHomeInfo () {
                     <input type="radio" name="house" value="House"/>
                     <input type="radio" name="mobileHome" value="Mobile Home/RV"/>
                     <input type="radio" name="tinyHome" value="Tiny Home"/>
-                    <input type="radio" name="apartmentCondo" value="Apartment/Condo"/>
+                    
 
                 <label>Which environment best describes where you live?</label>
                     <input type="radio" name="rural" value="Rural/Remote"/>
