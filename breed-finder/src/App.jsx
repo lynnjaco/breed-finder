@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 
 // Styling
 import './App.css'
@@ -23,7 +23,6 @@ import FormPerfectPup from './components/FormPerfectPup';
 function App() {
 
   const [allDogBreeds, setAllDogBreeds] = useState([]);
-  const [temperList, setTemperList] = useState([]);
 
   const initialResponse = {
     intro: {

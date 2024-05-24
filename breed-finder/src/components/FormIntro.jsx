@@ -1,8 +1,6 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function FormIntro ({ userResponse, setUserResponse }) {
-    const navigate = useNavigate();
-
     function handleNameChange(e){
         e.preventDefault();
         setUserResponse( prevUserRespState => (
@@ -40,8 +38,8 @@ export default function FormIntro ({ userResponse, setUserResponse }) {
                 <input type="number" value={ userResponse.intro.age } onChange={ handleAgeChange }/>
                 <label>Location</label>
                 <input type="text" placeholder="Zip Code" value={ userResponse.intro.zipCode } onChange={ handleZipCodeChange }/>
+                <Link to="/homeinfoform"><button>Next</button></Link>
             </form>
-            <input type="submit" value="Next"/>
             <h3>{JSON.stringify(userResponse)}</h3>
         </>
     )

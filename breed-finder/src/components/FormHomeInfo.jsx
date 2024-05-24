@@ -1,7 +1,4 @@
-import { useNavigate } from 'react-router-dom';
-
-export default function FormHomeInfo () {
-    const navigate = useNavigate();
+export default function FormHomeInfo ({ userResponse, setUserResponse }) {
 
     return (
         <>
@@ -37,6 +34,7 @@ export default function FormHomeInfo () {
                     <input type="radio" name="no_restrictions" value="No"/>
                 <input type="submit" value="Next"/>
             </form>
+            <h3>{JSON.stringify(userResponse)}</h3>
         </>
     )
 }
