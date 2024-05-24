@@ -1,4 +1,5 @@
-export default function FormHomeInfo () {
+export default function FormHomeInfo ({ userResponse, setUserResponse }) {
+
     return (
         <>
             <h3>Tell Me About Your</h3>
@@ -33,6 +34,7 @@ export default function FormHomeInfo () {
                     <input type="radio" name="no_restrictions" value="No"/>
                 <input type="submit" value="Next"/>
             </form>
+            <h3>{JSON.stringify(userResponse)}</h3>
         </>
     )
 }
