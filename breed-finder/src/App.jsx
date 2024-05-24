@@ -1,18 +1,29 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+// Styling
 import './App.css'
+
+// Data
 import getAllDogsList from './api/dogfetch';
-import FormIntro from './components/FormIntro';
+
+// General Components
 import Home from './components/Home';
 import Results from './components/Results.';
+
+// Form Components
+import FormIntro from './components/FormIntro';
+import FormHomeInfo from './components/FormHomeInfo';
+import FormFamily from './components/FormFamily';
+import FormExperience from './components/FormExperience';
+import FormPerfectPup from './components/FormPerfectPup';
 
 
 function App() {
 
   const [allDogBreeds, setAllDogBreeds] = useState([]);
   const [temperList, setTemperList] = useState([]);
-  const [userResponse, setUserResponse] = useState(initialResponse);
 
   const initialResponse = {
     intro: {
@@ -48,16 +59,18 @@ function App() {
     }
   }
 
+  const [userResponse, setUserResponse] = useState(initialResponse);
+
   return (
     <>
       <Router>
         <Routes>
           <Route path="/" element={ <Home /> } />
-          <Route path="/intro-form" element={ <FormIntro userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
-          <Route path="/home-info-form" element={ <FormHomeInfo userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
-          <Route path="/household-form" element={ <FormFamily userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
-          <Route path="/experience-form" element={ <FormExperience userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
-          <Route path="/perfect-pup-form" element={ <FormPerfectPup userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
+          <Route path="/introform" element={ <FormIntro userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
+          <Route path="/homeinfoform" element={ <FormHomeInfo userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
+          <Route path="/householdform" element={ <FormFamily userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
+          <Route path="/experienceform" element={ <FormExperience userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
+          <Route path="/perfectpupform" element={ <FormPerfectPup userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
           <Route path="/results" element={ <Results userResponse={ userResponse }/> }/>
         </Routes>
       </Router>  

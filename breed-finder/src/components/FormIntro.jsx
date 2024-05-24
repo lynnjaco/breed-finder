@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-export default function FormIntro () {
+export default function FormIntro ({ userResponse, setUserResponse }) {
     const navigate = useNavigate();
 
     return (

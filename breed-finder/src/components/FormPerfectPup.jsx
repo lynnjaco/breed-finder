@@ -35,7 +35,7 @@ export default function FormPerfectPup () {
                 <input type="radio" name="powerful" value="Powerful"/>
                 <input type="radio" name="compassionate" value="Compassionate"/>
             
-                <label>Which quality do you want least in your do?</label>
+                <label>Which quality do you want least in your dog?</label>
 
                 <p>Activity Level</p>
                 <input type="radio" name="playful" value="Playful"/>
