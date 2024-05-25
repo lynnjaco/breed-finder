@@ -1,7 +1,6 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-export default function FormFamily () {
-    const navigate = useNavigate();
+export default function FormFamily ({ userResponse, setUserResponse }) {
 
     return (
         <>
@@ -12,24 +11,43 @@ export default function FormFamily () {
                 <input type="number" name="householdMemberCount" min="1"/>
 
                 <label>Are there any children under 12 years old in your home?</label>
-                <input type="radio" name="yes_children" value="Yes"></input>
-                <input type="radio" name="no_children" value="No"></input>
+                <p>Yes</p>
+                <input 
+                    type="radio" 
+                    name="youngChildren" 
+                    value="Yes"></input>
+                <p>No</p>
+                <input 
+                    type="radio" 
+                    name="youngChildren" 
+                    value="No"></input>
 
                 <label>Are any members of your household allergic to dogs?</label>
-                <input type="radio" name="yes_allergies" value="Yes"></input>
-                <input type="radio" name="no_allergies" value="No"></input>
+                <p>Yes</p>
+                <input 
+                    type="radio" 
+                    name="allergies" 
+                    value="Yes"></input>
+                <p>No</p>
+                <input 
+                    type="radio" 
+                    name="allergies" 
+                    value="No"></input>
 
-                <label>Do you already have pets?</label>
-                <input type="radio" name="yes_pets" value="Yes"></input>
-                    <input type="checkbox" name="dog" value="Dog(s)"/>
-                    <input type="checkbox" name="cat" value="Cat(s)"/>
-                    <input type="checkbox" name="bird" value="Bird(s)"/>
-                    <input type="checkbox" name="rodent" value="Rodent(s)"/>
-                    <input type="checkbox" name="livestock" value="Livestock"/>
-                <input type="radio" name="no_pets" value="No"></input>
+                <label>Do you have any pets/animals?</label>
+                <input type="radio" name="otherAnimals" value="Yes"></input>
+                    <p>Dog(s)</p><input type="checkbox" name="animalType" value="Dog(s)"/>
+                    <p>Cat(s)</p><input type="checkbox" name="animalType" value="Cat(s)"/>
+                    <p>Bird(s)</p><input type="checkbox" name="animalType" value="Bird(s)"/>
+                    <p>Rodent(s)</p><input type="checkbox" name="animalType" value="Rodent(s)"/>
+                    <p>Livestock(s)</p><input type="checkbox" name="animalType" value="Livestock"/>
+                    <p>Other</p><input type="checkbox" name="animalType" value="Livestock"/>
+                <input type="radio" name="otherAnimals" value="No"></input>
 
-                <input type="submit" value="Submit"/>
+                <Link to="/homeinfoform"><button>Previous</button></Link>
+                <Link  to="/experienceform"><button>Next</button></Link>
             </form>
+            <h3>{JSON.stringify(userResponse)}</h3>
         </>
     )
 }

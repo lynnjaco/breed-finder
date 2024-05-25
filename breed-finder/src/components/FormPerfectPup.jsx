@@ -1,7 +1,6 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-export default function FormPerfectPup () {
-    const navigate = useNavigate();
+export default function FormPerfectPup ({ userResponse, setUserResponse }) {
 
     return (
         <>
@@ -12,56 +11,59 @@ export default function FormPerfectPup () {
                 <label>Which quality do you want most in your dog?</label>
               
                 <p>Activity Level</p>
-                <input type="radio" name="playful" value="Playful"/>
-                <input type="radio" name="calm" value="Calm"/>
-                <input type="radio" name="active" value="Active"/>
+                <input type="radio" name="activityYes" value="Playful"/>
+                <input type="radio" name="activityYes" value="Calm"/>
+                <input type="radio" name="activityYes" value="Active"/>
                 
                 <p>Personality</p>
-                <input type="radio" name="friendly" value="Friendly"/>
-                <input type="radio" name="curious" value="Curious"/>
-                <input type="radio" name="loyal" value="Loyal"/>
-                <input type="radio" name="brave" value="Brave"/>
-                <input type="radio" name="catLike" value="Cat-Like"/>
-                <input type="radio" name="cheerful" value="Cheerful"/>
-                <input type="radio" name="independent" value="Independent"/>
-                <input type="radio" name="affectionate" value="Affectionate"/>
-                <input type="radio" name="feisty" value="Feisty"/>
-                <input type="radio" name="sensitive" value="Sensitive"/>
+                <input type="radio" name="personalityYes" value="Friendly"/>
+                <input type="radio" name="personalityYes" value="Curious"/>
+                <input type="radio" name="personalityYes" value="Loyal"/>
+                <input type="radio" name="personalityYes" value="Brave"/>
+                <input type="radio" name="personalityYes" value="Cat-Like"/>
+                <input type="radio" name="personalityYes" value="Cheerful"/>
+                <input type="radio" name="personalityYes" value="Independent"/>
+                <input type="radio" name="personalityYes" value="Affectionate"/>
+                <input type="radio" name="personalityYes" value="Feisty"/>
+                <input type="radio" name="personalityYes" value="Sensitive"/>
                 
                 <p>Skill</p>
-                <input type="radio" name="hardworking" value="Hardworking"/>
-                <input type="radio" name="intelligent" value="Intelligent"/>
-                <input type="radio" name="protective" value="Protective"/>
-                <input type="radio" name="powerful" value="Powerful"/>
-                <input type="radio" name="compassionate" value="Compassionate"/>
+                <input type="radio" name="skillYes" value="Hardworking"/>
+                <input type="radio" name="skillYes" value="Intelligent"/>
+                <input type="radio" name="skillYes" value="Protective"/>
+                <input type="radio" name="skillYes" value="Powerful"/>
+                <input type="radio" name="skillYes" value="Compassionate"/>
             
                 <label>Which quality do you want least in your dog?</label>
 
                 <p>Activity Level</p>
-                <input type="radio" name="playful" value="Playful"/>
-                <input type="radio" name="calm" value="Calm"/>
-                <input type="radio" name="active" value="Active"/>
+                <input type="radio" name="activityNo" value="Playful"/>
+                <input type="radio" name="activityNo" value="Calm"/>
+                <input type="radio" name="activityNo" value="Active"/>
                 
                 <p>Personality</p>
-                <input type="radio" name="friendly" value="Friendly"/>
-                <input type="radio" name="curious" value="Curious"/>
-                <input type="radio" name="loyal" value="Loyal"/>
-                <input type="radio" name="brave" value="Brave"/>
-                <input type="radio" name="catLike" value="Cat-Like"/>
-                <input type="radio" name="cheerful" value="Cheerful"/>
-                <input type="radio" name="independent" value="Independent"/>
-                <input type="radio" name="affectionate" value="Affectionate"/>
-                <input type="radio" name="feisty" value="Feisty"/>
-                <input type="radio" name="sensitive" value="Sensitive"/>
+                <input type="radio" name="personalityNo" value="Friendly"/>
+                <input type="radio" name="personalityNo" value="Curious"/>
+                <input type="radio" name="personalityNo" value="Loyal"/>
+                <input type="radio" name="personalityNo" value="Brave"/>
+                <input type="radio" name="personalityNo" value="Cat-Like"/>
+                <input type="radio" name="personalityNo" value="Cheerful"/>
+                <input type="radio" name="personalityNo" value="Independent"/>
+                <input type="radio" name="personalityNo" value="Affectionate"/>
+                <input type="radio" name="personalityNo" value="Feisty"/>
+                <input type="radio" name="personalityNo" value="Sensitive"/>
                 
                 <p>Skill</p>
-                <input type="radio" name="hardworking" value="Hardworking"/>
-                <input type="radio" name="intelligent" value="Intelligent"/>
-                <input type="radio" name="protective" value="Protective"/>
-                <input type="radio" name="powerful" value="Powerful"/>
-                <input type="radio" name="compassionate" value="Compassionate"/>
+                <input type="radio" name="skillNo" value="Hardworking"/>
+                <input type="radio" name="skillNo" value="Intelligent"/>
+                <input type="radio" name="skillNo" value="Protective"/>
+                <input type="radio" name="skillNo" value="Powerful"/>
+                <input type="radio" name="skillNo" value="Compassionate"/>
 
+                <Link to="/experienceform"><button>Previous</button></Link>
+                <Link  to="/results"><button>Next</button></Link>
             </form>
+            <h3>{JSON.stringify(userResponse)}</h3>
         </>
     )
 }

@@ -1,7 +1,6 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-export default function FormExperience () {
-    const navigate = useNavigate();
+export default function FormExperience ({ userResponse, setUserResponse }) {
 
     return (
         <>
@@ -14,16 +13,18 @@ export default function FormExperience () {
                 <label>How would you describe your dog training abilty?</label>
                 <p>"Trained" is defined as house trained, leash trained, and able to follow basic commands: "sit", "stay", "come", "down", "drop it".</p>
                     <p>Non-Existent <span>"I've never trained a dog."</span></p>
-                        <input type="radio" name="no_trainer" value="none"/>
+                        <input type="radio" name="trainerLevel" value="none"/>
                     <p>Beginner <span>"I've trained one or two dogs."</span></p>
-                        <input type="radio" name="beginner_trainer" value="beginner"/>
+                        <input type="radio" name="trainerLevel" value="beginner"/>
                     <p>Intermediate <span>"I've trained 3 - 4 dogs."</span></p>
-                        <input type="radio" name="intermediate_trainer" value="intermediate"/>
+                        <input type="radio" name="trainerLevel" value="intermediate"/>
                     <p>Professional <span>"I've trained more than 5 dogs."</span></p>
-                        <input type="radio" name="professional_trainer" value="professional"/>
+                        <input type="radio" name="trainerLevel" value="professional"/>
                 
-                <input type="submit" value="Next"/>
+                <Link to="/householdform"><button>Previous</button></Link>
+                <Link  to="/perfectpupform"><button>Next</button></Link>
             </form>
+            <h3>{JSON.stringify(userResponse)}</h3>
         </>
     )
 }
