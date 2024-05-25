@@ -1,4 +1,8 @@
+import { useNavigate } from 'react-router-dom';
+
 export default function FormExperience () {
+    const navigate = useNavigate();
+
     return (
         <>
             <h3>Tell Me About Your</h3>
