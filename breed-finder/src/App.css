@@ -1,6 +1,39 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+:root {
+  --yinmn-blue: #3d5a80ff;
+  --powder-blue: #98c1d9ff;
+  --light-cyan: #e0fbfcff;
+  --burnt-sienna: #ee6c4dff;
+  --gunmetal: #293241ff;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  color: var(--gunmetal);
   text-align: center;
+}
+
+#home-logo {
+  width: 300px;
+}
+
+#home-logo:hover {
+  transform: translateY(-10px);
+  transition: transform 0.5s ease-in-out;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: var(--burnt-sienna);
+  color: rgb(255, 255, 255);
+  width: 200px;
+  height: 50px;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: rgb(204, 95, 68);
 }

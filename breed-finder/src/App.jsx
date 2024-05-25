@@ -41,15 +41,17 @@ function App() {
     },
     household: {
       quantity: "",
-        youngChildren: "",
-        allergies: "",
-        otherPets: {
-          dog: "",
-          cat: "",
-          bird: "",
-          rodent: "",
-          livestock: ""  
-        }
+      youngChildren: "",
+      allergies: "",
+      otherPets: {
+        check: "",
+        dog: "",
+        cat: "",
+        bird: "",
+        rodent: "",
+        livestock: "",
+        other: ""  
+      }
     },
     experience: {
       pastDogs: "",

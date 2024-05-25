@@ -2,14 +2,12 @@ import { Link } from 'react-router-dom';
 
 export default function FormHomeInfo ({ userResponse, setUserResponse }) {
     function handleDwellingChange(e){
-        e.preventDefault();
         setUserResponse( prevUserRespState => (
             {...prevUserRespState, homeInfo: { ...prevUserRespState.homeInfo, dwelling: e.target.value }
         }))   
     }
 
     function handleEnvironmentChange(e){
-        e.preventDefault();
         setUserResponse( prevUserRespState => (
             {...prevUserRespState, homeInfo: { ...prevUserRespState.homeInfo, environment: e.target.value }
         }))   
@@ -105,7 +103,6 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                 <label>Does your home have any size restrictions for dogs?</label>
                     <p>Yes</p>
                     <input 
-                        id="yesSizeRestriction"
                         type="radio" 
                         name="sizeRestriction" 
                         value="Yes" 
@@ -131,7 +128,7 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                         type="radio" 
                         name="sizeRestriction" 
                         value="No" 
-                        checked={ userResponse.homeInfo.sizeRestriction === "Infinity" }
+                        checked={ userResponse.homeInfo.sizeRestriction.maxWeight === Infinity }
                         onChange={ handleSizeRestrictionChange }/>
                     
                 <Link to="/introform"><button>Previous</button></Link>
