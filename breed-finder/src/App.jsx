@@ -34,7 +34,10 @@ function App() {
     homeInfo: {
       dwelling: "",
         environment: "",
-        sizeRestriction: ""  
+        sizeRestriction: {
+          yesNo: "",
+          maxWeight: ""
+        }  
     },
     household: {
       quantity: "",
