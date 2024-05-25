@@ -14,10 +14,13 @@ export default function FormExperience ({ userResponse, setUserResponse }) {
                 <p>"Trained" is defined as house trained, leash trained, and able to follow basic commands: "sit", "stay", "come", "down", "drop it".</p>
                     <p>Non-Existent <span>"I've never trained a dog."</span></p>
                         <input type="radio" name="trainerLevel" value="none"/>
+
                     <p>Beginner <span>"I've trained one or two dogs."</span></p>
                         <input type="radio" name="trainerLevel" value="beginner"/>
+
                     <p>Intermediate <span>"I've trained 3 - 4 dogs."</span></p>
                         <input type="radio" name="trainerLevel" value="intermediate"/>
+                        
                     <p>Professional <span>"I've trained more than 5 dogs."</span></p>
                         <input type="radio" name="trainerLevel" value="professional"/>
                 

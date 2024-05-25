@@ -1,14 +1,13 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Home () {
 
     return (
         <>
-            <h1>Welcome To</h1>
-            <img />
+            <img src='/public/assets/perfectpup.png' alt='perfect pup logo' id='home-logo'/>
             <p>Are you read to find your perfect pup?</p>
             <p>Take a short quiz and find out which dog breeds are most compatible for you!</p>
-            <button>Find My Perfect Pup</button>
+            <Link to="/introform"><button>Find My Perfect Pup</button></Link>
         </>
     )
 }
