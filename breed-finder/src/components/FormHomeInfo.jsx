@@ -27,87 +27,97 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
 
             <form>
                 <label>Which dwelling best describes your home type?</label>
-                    <p>Apartment/Condo (Studio - 2 Bedrooms)</p>
+                    <label>Apartment/Condo (Studio - 2 Bedrooms)
                     <input 
                         type="radio" 
                         name="dwelling" 
                         value="ACSM" 
                         checked={ userResponse.homeInfo.dwelling === "ACSM" }
-                        onChange={ handleDwellingChange }/>
+                        onChange={ handleDwellingChange }
+                    /></label>
 
-                    <p>Apartment/Condo (2+ Bedrooms)</p>
+                    <label>Apartment/Condo (2+ Bedrooms)
                     <input 
                         type="radio" 
                         name="dwelling" 
                         value="ACLG" 
                         checked={ userResponse.homeInfo.dwelling === "ACLG" }
-                        onChange={ handleDwellingChange }/>
+                        onChange={ handleDwellingChange }
+                    /></label>
 
-                    <p>Townhouse</p>
+                    <label>Townhouse
                     <input 
                         type="radio" 
                         name="dwelling" 
                         value="TNHS" 
                         checked={ userResponse.homeInfo.dwelling === "TNHS" }
-                        onChange={ handleDwellingChange }/>
+                        onChange={ handleDwellingChange }
+                    /></label>
 
-                    <p>House</p>
+                    <label>House
                     <input 
                         type="radio" 
                         name="dwelling" 
                         value="HS" 
                         checked={ userResponse.homeInfo.dwelling === "HS" }
-                        onChange={ handleDwellingChange }/>
+                        onChange={ handleDwellingChange }
+                    /></label>
 
-                    <p>Mobile Home/RV</p>
+                    <label>Mobile Home/RV
                     <input 
                         type="radio" 
                         name="dwelling" 
                         value="MHRV" 
                         checked={ userResponse.homeInfo.dwelling === "MHRV" }
-                        onChange={ handleDwellingChange }/>
+                        onChange={ handleDwellingChange }
+                    /></label>
 
-                    <p>Tiny House</p>
+                    <label>Tiny House
                     <input 
                         type="radio" 
                         name="dwelling" 
                         value="TYHS" 
                         checked={ userResponse.homeInfo.dwelling === "TYHS" }
-                        onChange={ handleDwellingChange }/>
+                        onChange={ handleDwellingChange }
+                    /></label>
                     
                 <label>Which environment best describes where you live?</label>
-                    <p>Rural/Remote</p>
+                    <label>Rural/Remote
                     <input 
                         type="radio" 
                         name="environment" 
                         value="RR" 
                         checked={ userResponse.homeInfo.environment === "RR" }
-                        onChange={ handleEnvironmentChange }/>
+                        onChange={ handleEnvironmentChange }
+                    /></label>
 
-                    <p>City/Urban</p>
+                    <label>City/Urban
                     <input 
                         type="radio" 
                         name="environment" 
                         value="CU" 
                         checked={ userResponse.homeInfo.environment === "CU" }
-                        onChange={ handleEnvironmentChange }/>
+                        onChange={ handleEnvironmentChange }
+                    /></label>
                     
-                    <p>Suburban</p>
+                    <label>Suburban
                     <input 
                         type="radio" 
                         name="environment" 
                         value="SB" 
                         checked={ userResponse.homeInfo.environment === "SB" }
-                        onChange={ handleEnvironmentChange }/>
+                        onChange={ handleEnvironmentChange }
+                    /></label>
 
                 <label>Does your home have any size restrictions for dogs?</label>
-                    <p>Yes</p>
+                    <label>Yes
                     <input 
                         type="radio" 
                         name="sizeRestriction" 
                         value="Yes" 
                         checked={ userResponse.homeInfo.sizeRestriction.yesNo === "Yes" }
-                        onChange={ handleSizeRestrictionChange }/>
+                        onChange={ handleSizeRestrictionChange }
+                    /></label>
 
                         { userResponse.homeInfo.sizeRestriction.yesNo === "Yes" && (
                             <input
@@ -123,13 +133,14 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                             />
                         )} 
 
-                    <p>No</p>
+                    <label>No
                     <input 
                         type="radio" 
                         name="sizeRestriction" 
                         value="No" 
                         checked={ userResponse.homeInfo.sizeRestriction.maxWeight === Infinity }
-                        onChange={ handleSizeRestrictionChange }/>
+                        onChange={ handleSizeRestrictionChange }
+                    /></label>
                     
                 <Link to="/introform"><button>Previous</button></Link>
                 <Link  to="/householdform"><button>Next</button></Link>
