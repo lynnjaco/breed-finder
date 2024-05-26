@@ -1,0 +1,32 @@
+#header-bar {
+    width: 100vw;
+    background-color:  rgb(255, 255, 255);
+    position: relative;
+    border-bottom: 8px solid #F2F2F2;
+}
+
+#header-logo {
+    width: 125px;
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+#header-links {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    a {
+        margin-left: 70px;
+        margin-right: 70px;
+        color: #293241ff
+    }
+    
+    a:hover {
+        color: #ee6c4dff;
+    }
+}

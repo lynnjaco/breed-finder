@@ -33,92 +33,96 @@ export default function FormFamily({ userResponse, setUserResponse }) {
                         onChange={ handleFamilyQuantityChange }/>
 
                     <label>Are there any children under 12 years old in your home?</label>
-                    <p>Yes</p>
+                    <label>Yes
                     <input
                         type="radio"
                         name="youngChildren"
                         value="Yes"
                         onChange={ handleYoungChildrenChange }
-                        checked={ userResponse.household.youngChildren === "Yes" }></input>
+                        checked={ userResponse.household.youngChildren === "Yes" }
+                    /></label>
 
-                    <p>No</p>
+                    <label>No
                     <input
                         type="radio"
                         name="youngChildren"
                         value="No"
                         onChange={ handleYoungChildrenChange }
-                        checked={ userResponse.household.youngChildren === "No" }></input>
+                        checked={ userResponse.household.youngChildren === "No" }
+                    /></label>
 
                     <label>Are any members of your household allergic to dogs?</label>
-                    <p>Yes</p>
+                    <label>Yes
                     <input
                         type="radio"
                         name="allergies"
                         value="Yes"
                         onChange={ handleAllergiesChange }
-                        checked={ userResponse.household.allergies === "Yes" }></input>
+                        checked={ userResponse.household.allergies === "Yes" }
+                    /></label>
 
-                    <p>No</p>
+                    <label>No
                     <input
                         type="radio"
                         name="allergies"
                         value="No"
                         onChange={ handleAllergiesChange }
-                        checked={ userResponse.household.allergies === "No" }></input>
+                        checked={ userResponse.household.allergies === "No" }
+                    /></label>
 
                 <label>Do you have any pets/animals?</label>
-                    <p>Yes</p>
+                    <label>Yes
                     <input
                         type="radio"
                         name="otherPets"
                         value="Yes"
-                    ></input>
+                    /></label>
 
                     {userResponse.household.otherPets.check === "Yes" && (
                         <>
-                            <p>Dog(s)</p>
+                            <label>Dog(s)
                             <input
                                 type="checkbox"
                                 name="otherAnimals"
-                            />
+                            /></label>
 
-                            <p>Cat(s)</p>
+                            <label>Cat(s)
                             <input
                                 type="checkbox"
                                 name="otherAnimals"
-                            />
+                            /></label>
 
-                            <p>Bird(s)</p>
+                            <label>Bird(s)
                             <input
                                 type="checkbox"
                                 name="otherAnimals"
-                            />
+                            /></label>
 
-                            <p>Rodent(s)</p>
+                            <label>Rodent(s)
                             <input
                                 type="checkbox"
                                 name="otherAnimals"
-                            />
+                            /></label>
 
-                            <p>Livestock(s)</p>
+                            <label>Livestock(s)
                             <input
                                 type="checkbox"
                                 name="otherAnimals"
-                            />
+                            /></label>
 
-                            <p>Other</p>
+                            <label>Other
                             <input
                                 type="checkbox"
                                 name="otherAnimals"
-                             />
+                            /></label>
                         </>
                     )}
-                    <p>No</p>
-                <input
-                    type="radio"
-                    name="otherPets"
-                    value="No"
-                ></input>
+                    <label>No
+                    <input
+                        type="radio"
+                        name="otherPets"
+                        value="No"
+                    /></label>
 
                 <Link to="/homeinfoform"><button type="button">Previous</button></Link>
                 <Link to="/experienceform"><button type="button">Next</button></Link>

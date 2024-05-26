@@ -18,6 +18,8 @@ import FormHomeInfo from './components/FormHomeInfo';
 import FormFamily from './components/FormFamily';
 import FormExperience from './components/FormExperience';
 import FormPerfectPup from './components/FormPerfectPup';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -66,19 +68,25 @@ function App() {
   const [userResponse, setUserResponse] = useState(initialResponse);
 
   return (
-    <>
+    <div id="main">
       <Router>
+        <Header />
+        <div id='content-container'>
         <Routes>
           <Route path="/" element={ <Home /> } />
-          <Route path="/introform" element={ <FormIntro userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
-          <Route path="/homeinfoform" element={ <FormHomeInfo userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
-          <Route path="/householdform" element={ <FormFamily userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
-          <Route path="/experienceform" element={ <FormExperience userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
-          <Route path="/perfectpupform" element={ <FormPerfectPup userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
+          {/* <div id='form-container'> */}
+            <Route path="/introform" element={ <FormIntro userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
+            <Route path="/homeinfoform" element={ <FormHomeInfo userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
+            <Route path="/householdform" element={ <FormFamily userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
+            <Route path="/experienceform" element={ <FormExperience userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
+            <Route path="/perfectpupform" element={ <FormPerfectPup userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
+          {/* </div> */}
           <Route path="/results" element={ <Results userResponse={ userResponse }/> }/>
         </Routes>
+        </div>
+        <Footer />
       </Router>  
-    </>
+    </div>
   )
 }
 
