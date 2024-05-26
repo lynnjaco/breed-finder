@@ -22,9 +22,16 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
     }
 
     return (
-        <>
-            <h3>Tell Me About Your</h3>
-            <h1>Home</h1>
+        <div className='form-container column'>
+            <h3 className='form-section-title'>Home</h3>
+
+            <div className='page-indicator-container row'>
+                <div className='page-indicator background-normal'><h3 className='right-in-the-middle form-section-number-grey'>1</h3></div>
+                <div className='page-indicator background-active'><h3 className='right-in-the-middle form-section-number-active'>2</h3></div>
+                <div className='page-indicator background-normal'><h3 className='right-in-the-middle form-section-number-grey'>3</h3></div>
+                <div className='page-indicator background-normal'><h3 className='right-in-the-middle form-section-number-grey'>4</h3></div>
+                <div className='page-indicator background-normal'><h3 className='right-in-the-middle form-section-number-grey'>5</h3></div>
+            </div>
 
             <form>
                 <label>Which dwelling best describes your home type?</label>
@@ -143,10 +150,10 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                         onChange={ handleSizeRestrictionChange }
                     /></label>
                     
-                <Link to="/introform"><button>Previous</button></Link>
-                <Link  to="/householdform"><button>Next</button></Link>
+                <Link to="/introform"><button className='previous-button'>Previous</button></Link>
+                <Link  to="/householdform"><button className='next-button'>Next</button></Link>
             </form>
-            <h3>{JSON.stringify(userResponse)}</h3>
-        </>
+            {/* <h3>{JSON.stringify(userResponse)}</h3> */}
+        </div>
     )
 }

@@ -21,9 +21,17 @@ export default function FormFamily({ userResponse, setUserResponse }) {
     }
 
     return (
-        <>
-            <h3>Tell Me About Your</h3>
-            <h1>Family</h1>
+        <div className='form-container column'>
+            <h3 className='form-section-title'>Family</h3>
+
+            <div className='page-indicator-container row'>
+                <div className='page-indicator background-normal'><h3 className='right-in-the-middle form-section-number-grey'>1</h3></div>
+                <div className='page-indicator background-normal'><h3 className='right-in-the-middle form-section-number-grey'>2</h3></div>
+                <div className='page-indicator background-active'><h3 className='right-in-the-middle form-section-number-active'>3</h3></div>
+                <div className='page-indicator background-normal'><h3 className='right-in-the-middle form-section-number-grey'>4</h3></div>
+                <div className='page-indicator background-normal'><h3 className='right-in-the-middle form-section-number-grey'>5</h3></div>
+            </div>
+
             <form>
                 <label>How many people are in your household?</label>
                     <input
@@ -124,10 +132,10 @@ export default function FormFamily({ userResponse, setUserResponse }) {
                         value="No"
                     /></label>
 
-                <Link to="/homeinfoform"><button type="button">Previous</button></Link>
-                <Link to="/experienceform"><button type="button">Next</button></Link>
+                <Link to="/homeinfoform"><button className='previous-button'>Previous</button></Link>
+                <Link to="/experienceform"><button className='next-button'>Next</button></Link>
             </form>
-            <h3>{JSON.stringify(userResponse)}</h3>
-        </>
+            {/* <h3>{JSON.stringify(userResponse)}</h3> */}
+        </div>
     );
 }

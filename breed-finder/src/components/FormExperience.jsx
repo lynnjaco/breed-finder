@@ -9,9 +9,17 @@ export default function FormExperience ({ userResponse, setUserResponse }) {
     }
 
     return (
-        <>
-            <h3>Tell Me About Your</h3>
-            <h1>Experience</h1>
+        <div className='form-container column'>
+            <h3 className='form-section-title'>Experience</h3>
+
+            <div className='page-indicator-container row'>
+                <div className='page-indicator background-normal'><h3 className='right-in-the-middle form-section-number-grey'>1</h3></div>
+                <div className='page-indicator background-normal'><h3 className='right-in-the-middle form-section-number-grey'>2</h3></div>
+                <div className='page-indicator background-normal'><h3 className='right-in-the-middle form-section-number-grey'>3</h3></div>
+                <div className='page-indicator background-active'><h3 className='right-in-the-middle form-section-number-active'>4</h3></div>
+                <div className='page-indicator background-normal'><h3 className='right-in-the-middle form-section-number-grey'>5</h3></div>
+            </div>
+
             <form>
                 <label>How many dogs have you owned in the past?</label>
                 <input type="number"/>
@@ -30,10 +38,10 @@ export default function FormExperience ({ userResponse, setUserResponse }) {
                     <label>Professional <span>"I've trained more than 5 dogs."</span>
                         <input type="radio" name="trainerLevel" value="professional"/></label>
                 
-                <Link to="/householdform"><button>Previous</button></Link>
-                <Link  to="/perfectpupform"><button>Next</button></Link>
+                <Link to="/householdform"><button className='previous-button'>Previous</button></Link>
+                <Link  to="/perfectpupform"><button className='next-button'>Next</button></Link>
             </form>
-            <h3>{JSON.stringify(userResponse)}</h3>
-        </>
+            {/* <h3>{JSON.stringify(userResponse)}</h3> */}
+        </div>
     )
 }
