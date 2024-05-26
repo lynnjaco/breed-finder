@@ -31,16 +31,44 @@ body {
   min-height: 100vh;
 }
 
+.input-box {
+  width: 500px;
+  height: 40px;
+  text-align: center;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--powder-blue);
+}
+
+.narrow-input {
+  width: 150px;
+}
+
+.input-box:focus {
+  background-color: var(--light-cyan);
+  outline: none;
+}
+
+.border-rad {
+  border-radius: 10px;
+}
+
+/* placement */
 .row {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
 .column {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .center-x-axis {
@@ -48,6 +76,3 @@ body {
   margin-right: auto;
 }
 
-.border-rad {
-  border-radius: 10px;
-}

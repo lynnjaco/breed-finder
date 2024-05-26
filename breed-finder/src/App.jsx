@@ -74,13 +74,11 @@ function App() {
         <div id='content-container' className='column'>
         <Routes>
           <Route path="/" element={ <Home /> } />
-          {/* <div id='form-container'> */}
-            <Route path="/introform" element={ <FormIntro userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
-            <Route path="/homeinfoform" element={ <FormHomeInfo userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
-            <Route path="/householdform" element={ <FormFamily userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
-            <Route path="/experienceform" element={ <FormExperience userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
-            <Route path="/perfectpupform" element={ <FormPerfectPup userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
-          {/* </div> */}
+          <Route path="/introform" element={ <FormIntro userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
+          <Route path="/homeinfoform" element={ <FormHomeInfo userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
+          <Route path="/householdform" element={ <FormFamily userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
+          <Route path="/experienceform" element={ <FormExperience userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
+          <Route path="/perfectpupform" element={ <FormPerfectPup userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
           <Route path="/results" element={ <Results userResponse={ userResponse }/> }/>
         </Routes>
         </div>
