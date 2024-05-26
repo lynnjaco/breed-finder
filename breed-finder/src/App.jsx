@@ -71,7 +71,7 @@ function App() {
     <div id="main">
       <Router>
         <Header />
-        <div id='content-container'>
+        <div id='content-container' className='column'>
         <Routes>
           <Route path="/" element={ <Home /> } />
           {/* <div id='form-container'> */}

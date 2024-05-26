@@ -9,13 +9,12 @@
 #main {
   width: 100%;
   display: grid;
-  grid-template-rows: 150px 1000px 100px;
+  grid-template-rows: 150px 800px 100px;
 }
 
 #content-container {
   background-image: url("public/assets/bgphoto.png");
-  /* background-color: rgb(255, 255, 255); */
-  /* opacity: 60%; */
+  opacity: 90%;
   color: var(--gunmetal);
   width: 100%;
   height: 100%;
@@ -34,6 +33,7 @@ button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
+  margin: 15px;
   font-size: 1em;
   font-weight: 700;
   background-color: var(--gunmetal);
@@ -44,5 +44,37 @@ button {
 }
 
 button:hover {
-  background-color: rgb(204, 95, 68);
+  background-color: var(--burnt-sienna);
+}
+
+/* Home Component */
+
+#home-container {
+  width: 900px;
+  height: 500px;
+  background-color: rgb(255, 255, 255, 0.9);
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    margin: 0px;
+  }
+
+  span {
+    color: var(--burnt-sienna);
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 45px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  p {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+
+  button {
+    width: 300px;
+  }
 }
