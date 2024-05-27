@@ -41,32 +41,6 @@ export default function FormPerfectPup ({ userResponse, setUserResponse }) {
                     <label>Powerful<input type="radio" name="mostDesiredTrait" value="Powerful"/></label>
                     <label>Compassionate<input type="radio" name="mostDesiredTrait" value="Compassionate"/></label>
             
-                <label>Which quality do you want least in your dog?</label>
-
-                    <p>Activity Level</p>
-                    <label>Playful<input type="radio" name="leastDesiredTrait" value="Playful"/></label>
-                    <label>Calm<input type="radio" name="leastDesiredTrait" value="Calm"/></label>
-                    <label>Active<input type="radio" name="leastDesiredTrait" value="Active"/></label>
-                    
-                    <p>Personality</p>
-                    <label>Friendly<input type="radio" name="leastDesiredTrait" value="Friendly"/></label>
-                    <label>Curious<input type="radio" name="leastDesiredTrait" value="Curious"/></label>
-                    <label>Loyal<input type="radio" name="leastDesiredTrait" value="Loyal"/></label>
-                    <label>Brave<input type="radio" name="leastDesiredTrait" value="Brave"/></label>
-                    <label>Cat-Like<input type="radio" name="leastDesiredTrait" value="Cat-Like"/></label>
-                    <label>Cheerful<input type="radio" name="leastDesiredTrait" value="Cheerful"/></label>
-                    <label>Independent<input type="radio" name="leastDesiredTrait" value="Independent"/></label>
-                    <label>Affectionate<input type="radio" name="leastDesiredTrait" value="Affectionate"/></label>
-                    <label>Feisty<input type="radio" name="leastDesiredTrait" value="Feisty"/></label>
-                    <label>Sensitive<input type="radio" name="leastDesiredTrait" value="Sensitive"/></label>
-                    
-                    <p>Skill</p>
-                    <label>Hardworking<input type="radio" name="leastDesiredTrait" value="Hardworking"/></label>
-                    <label>Intelligent<input type="radio" name="leastDesiredTrait" value="Intelligent"/></label>
-                    <label>Protective<input type="radio" name="leastDesiredTrait" value="Protective"/></label>
-                    <label>Powerful<input type="radio" name="leastDesiredTrait" value="Powerful"/></label>
-                    <label>Compassionate<input type="radio" name="leastDesiredTrait" value="Compassionate"/></label>
-
                 <Link to="/experienceform"><button className='previous-button'>Previous</button></Link>
                 <Link  to="/results"><button className='next-button'>Results</button></Link>
             </form>
