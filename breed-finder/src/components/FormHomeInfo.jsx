@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import "./FormHomeInfo.css"
 
 
 export default function FormHomeInfo ({ userResponse, setUserResponse }) {
@@ -33,123 +34,167 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                 <div className='page-indicator background-normal'><h3 className='right-in-the-middle form-section-number-grey'>5</h3></div>
             </div>
 
-            <form>
-                <label>Which dwelling best describes your home type?</label>
-                    <label>Apartment/Condo (Studio - 2 Bedrooms)
-                    <input 
-                        type="radio" 
-                        name="dwelling" 
-                        value="ACSM" 
-                        checked={ userResponse.homeInfo.dwelling === "ACSM" }
-                        onChange={ handleDwellingChange }
-                    /></label>
+            <h4>Thanks, {userResponse.intro.name || "Friend"}! Some dog breeds thrive in certain living situations better than others due to their size, temperament, and activity level. Tell me about where your Perfect Pup will live...  </h4>
 
-                    <label>Apartment/Condo (2+ Bedrooms)
-                    <input 
-                        type="radio" 
-                        name="dwelling" 
-                        value="ACLG" 
-                        checked={ userResponse.homeInfo.dwelling === "ACLG" }
-                        onChange={ handleDwellingChange }
-                    /></label>
+            <form className='column center-x-axis'>
+                <div className='home-question-container'>
+                    <label className='home-question'>Which dwelling best describes your home type?</label>
+                    <div className='dwelling-question'>
+                        <div className='home-radio-option column'>
+                            <img src="/public/assets/formhomeicons/townhouseicon.svg" alt='Townhouse Icon'/>
+                            <label>
+                            <input 
+                                type="radio" 
+                                name="dwelling" 
+                                value="TNHS" 
+                                checked={ userResponse.homeInfo.dwelling === "TNHS" }
+                                onChange={ handleDwellingChange }
+                            /><br/>Townhouse</label>
+                        </div>
 
-                    <label>Townhouse
-                    <input 
-                        type="radio" 
-                        name="dwelling" 
-                        value="TNHS" 
-                        checked={ userResponse.homeInfo.dwelling === "TNHS" }
-                        onChange={ handleDwellingChange }
-                    /></label>
+                        <div className='home-radio-option column'>
+                        <img src="/public/assets/formhomeicons/house.svg" alt='House Icon'/>
+                            <label>
+                            <input 
+                                type="radio" 
+                                name="dwelling" 
+                                value="HS" 
+                                checked={ userResponse.homeInfo.dwelling === "HS" }
+                                onChange={ handleDwellingChange }
+                            /><br/>House</label>
+                        </div>
 
-                    <label>House
-                    <input 
-                        type="radio" 
-                        name="dwelling" 
-                        value="HS" 
-                        checked={ userResponse.homeInfo.dwelling === "HS" }
-                        onChange={ handleDwellingChange }
-                    /></label>
+                        <div className='home-radio-option column'>
+                            <img src="/public/assets/formhomeicons/apartmenticon.svg" alt='Apartment Icon'/>
+                            <label>
+                            <input 
+                                type="radio" 
+                                name="dwelling" 
+                                value="ACSM" 
+                                checked={ userResponse.homeInfo.dwelling === "ACSM" }
+                                onChange={ handleDwellingChange }
+                            /><br/>Apartment/Condo<br/>(Studio - 2 Bedrooms)</label>
+                        </div>
 
-                    <label>Mobile Home/RV
-                    <input 
-                        type="radio" 
-                        name="dwelling" 
-                        value="MHRV" 
-                        checked={ userResponse.homeInfo.dwelling === "MHRV" }
-                        onChange={ handleDwellingChange }
-                    /></label>
+                        <div className='home-radio-option column'>
+                        <img src="/public/assets/formhomeicons/apartmentplusicon.svg" alt='Large Apartment Icon'/>
+                            <label> 
+                            <input 
+                                type="radio" 
+                                name="dwelling" 
+                                value="ACLG" 
+                                checked={ userResponse.homeInfo.dwelling === "ACLG" }
+                                onChange={ handleDwellingChange }
+                            /><br/>Large Apartment/Condo<br/>(2+ Bedrooms)</label>
+                        </div>
 
-                    <label>Tiny House
-                    <input 
-                        type="radio" 
-                        name="dwelling" 
-                        value="TYHS" 
-                        checked={ userResponse.homeInfo.dwelling === "TYHS" }
-                        onChange={ handleDwellingChange }
-                    /></label>
-                    
-                <label>Which environment best describes where you live?</label>
-                    <label>Rural/Remote
-                    <input 
-                        type="radio" 
-                        name="environment" 
-                        value="RR" 
-                        checked={ userResponse.homeInfo.environment === "RR" }
-                        onChange={ handleEnvironmentChange }
-                    /></label>
+                        <div className='home-radio-option column'>
+                        <img src="/public/assets/formhomeicons/rv.svg" alt='Mobile Home/RV Icon'/>
 
-                    <label>City/Urban
-                    <input 
-                        type="radio" 
-                        name="environment" 
-                        value="CU" 
-                        checked={ userResponse.homeInfo.environment === "CU" }
-                        onChange={ handleEnvironmentChange }
-                    /></label>
-                    
-                    <label>Suburban
-                    <input 
-                        type="radio" 
-                        name="environment" 
-                        value="SB" 
-                        checked={ userResponse.homeInfo.environment === "SB" }
-                        onChange={ handleEnvironmentChange }
-                    /></label>
+                            <label>
+                            <input 
+                                type="radio" 
+                                name="dwelling" 
+                                value="MHRV" 
+                                checked={ userResponse.homeInfo.dwelling === "MHRV" }
+                                onChange={ handleDwellingChange }
+                            /><br/>Mobile Home/RV</label>
+                        </div>
 
-                <label>Does your home have any size restrictions for dogs?</label>
-                    <label>Yes
-                    <input 
-                        type="radio" 
-                        name="sizeRestriction" 
-                        value="Yes" 
-                        checked={ userResponse.homeInfo.sizeRestriction.yesNo === "Yes" }
-                        onChange={ handleSizeRestrictionChange }
-                    /></label>
+                        <div className='home-radio-option column'>
+                            <img src="/public/assets/formhomeicons/tinyhouse.svg" alt='Tiny House Icon'/>
+                            <label>
+                            <input 
+                                type="radio" 
+                                name="dwelling" 
+                                value="TYHS" 
+                                checked={ userResponse.homeInfo.dwelling === "TYHS" }
+                                onChange={ handleDwellingChange }
+                            /><br/>Tiny House</label>
+                        </div>
 
-                        { userResponse.homeInfo.sizeRestriction.yesNo === "Yes" && (
-                            <input
-                                type="number"
-                                name="maxWeight"
-                                placeholder="Max Permitted Weight"
-                                min="1"
-                                max="200"
-                                value={ userResponse.homeInfo.sizeRestriction.maxWeight }
-                                onChange={(e) => setUserResponse(prevUserRespState => ({
-                                    ...prevUserRespState, homeInfo: { ...prevUserRespState.homeInfo, sizeRestriction:{ ...prevUserRespState.homeInfo.sizeRestriction, maxWeight: e.target.value } }
-                                }))}
-                            />
-                        )} 
+                    </div>
+                </div>
+                
+                <div className='home-question-container'>
+                    <label className='home-question'>Which environment best describes where you live?</label>
+                    <div className='row'>
+                        <div className='home-radio-option column'>
+                        <img src="/public/assets/formhomeicons/remote.svg" alt='Rural/Remote Icon'/>
+                            <label>
+                            <input 
+                                type="radio" 
+                                name="environment" 
+                                value="RR" 
+                                checked={ userResponse.homeInfo.environment === "RR" }
+                                onChange={ handleEnvironmentChange }
+                            /><br/>Rural/Remote</label>
+                        </div>
 
-                    <label>No
-                    <input 
-                        type="radio" 
-                        name="sizeRestriction" 
-                        value="No" 
-                        checked={ userResponse.homeInfo.sizeRestriction.maxWeight === Infinity }
-                        onChange={ handleSizeRestrictionChange }
-                    /></label>
-                    
+                        <div className='home-radio-option column'>
+                        <img src="/public/assets/formhomeicons/city.svg" alt='City Icon'/>
+                            <label>
+                            <input 
+                                type="radio" 
+                                name="environment" 
+                                value="CU" 
+                                checked={ userResponse.homeInfo.environment === "CU" }
+                                onChange={ handleEnvironmentChange }
+                            /><br/>City/Urban</label>
+                        </div>
+
+                        <div className='home-radio-option column'>
+                        <img src="/public/assets/formhomeicons/suburbs.svg" alt='Suburbs Icon'/>
+                            <label>
+                            <input 
+                                type="radio" 
+                                name="environment" 
+                                value="SB" 
+                                checked={ userResponse.homeInfo.environment === "SB" }
+                                onChange={ handleEnvironmentChange }
+                            /><br/>Suburban</label>
+                        </div>
+                    </div>
+                </div>
+                <div className='home-question-container'>
+                    <label className='home-question'>Does your home have any size restrictions for dogs?</label>
+                    <div id= "size-restrictions" className='row'>
+                        <label>
+                        <input 
+                            type="radio" 
+                            name="sizeRestriction" 
+                            value="Yes" 
+                            checked={ userResponse.homeInfo.sizeRestriction.yesNo === "Yes" }
+                            onChange={ handleSizeRestrictionChange }
+                        /><br/>Yes</label>
+
+                            { userResponse.homeInfo.sizeRestriction.yesNo === "Yes" && (
+                                <input
+                                    type="number"
+                                    name="maxWeight"
+                                    className='input-box narrow-input'
+                                    placeholder="Max Permitted Weight"
+                                    min="1"
+                                    max="200"
+                                    value={ userResponse.homeInfo.sizeRestriction.maxWeight }
+                                    onChange={(e) => setUserResponse(prevUserRespState => ({
+                                        ...prevUserRespState, homeInfo: { ...prevUserRespState.homeInfo, sizeRestriction:{ ...prevUserRespState.homeInfo.sizeRestriction, maxWeight: e.target.value } }
+                                    }))}
+                                />
+                            )} 
+
+                        <label>
+                        <input 
+                            type="radio" 
+                            name="sizeRestriction" 
+                            value="No" 
+                            checked={ userResponse.homeInfo.sizeRestriction.maxWeight === Infinity }
+                            onChange={ handleSizeRestrictionChange }
+                        /><br/>No</label>
+                    </div>
+                </div> 
+
+                   
                 <Link to="/introform"><button className='previous-button'>Previous</button></Link>
                 <Link  to="/householdform"><button className='next-button'>Next</button></Link>
             </form>

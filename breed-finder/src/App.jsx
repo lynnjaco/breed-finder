@@ -10,7 +10,7 @@ import getAllDogsList from './api/dogfetch';
 
 // General Components
 import Home from './components/Home';
-import Results from './components/Results.';
+import Results from './components/Results';
 
 // Form Components
 import FormIntro from './components/FormIntro';
