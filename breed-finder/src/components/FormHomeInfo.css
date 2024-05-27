@@ -1,0 +1,20 @@
+.dwelling-question {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.home-radio-option {
+    margin: 20px;
+
+    img {
+        height: 50px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+}
+
+
+
