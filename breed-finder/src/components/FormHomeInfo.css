@@ -1,0 +1,34 @@
+.dwelling-question {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.home-question-container {
+    align-items: first baseline;
+    margin: 12px 0px;
+}
+
+.home-question {
+    font-weight: 600;   
+    font-size: 14px;
+    color: #ee6c4dff;
+}
+
+.home-radio-option {
+    margin: 20px;
+
+    img {
+        height: 50px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+}
+
+#size-restrictions {
+    margin-top: 10px;
+    justify-content: space-evenly;
+}
+
