@@ -76,3 +76,24 @@ body {
   margin-right: auto;
 }
 
+.yes-no-inputs {
+  margin-top: 5px;
+  justify-content: center;
+
+  input {
+    margin: 0 50px;
+  }
+  
+}
+
+
+.question-container {
+  align-items: first baseline;
+  margin: 15px 0px;
+}
+
+.question {
+  font-weight: 600;   
+  font-size: 14px;
+  color: #ee6c4dff;
+}

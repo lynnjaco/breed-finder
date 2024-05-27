@@ -37,8 +37,8 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
             <h4>Thanks, {userResponse.intro.name || "Friend"}! Some dog breeds thrive in certain living situations better than others due to their size, temperament, and activity level. Tell me about where your Perfect Pup will live...  </h4>
 
             <form className='column center-x-axis'>
-                <div className='home-question-container'>
-                    <label className='home-question'>Which dwelling best describes your home type?</label>
+                <div className='question-container'>
+                    <label className='question'>Which dwelling best describes your home type?</label>
                     <div className='dwelling-question'>
                         <div className='home-radio-option column'>
                             <img src="/public/assets/formhomeicons/townhouseicon.svg" alt='Townhouse Icon'/>
@@ -116,8 +116,8 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                     </div>
                 </div>
                 
-                <div className='home-question-container'>
-                    <label className='home-question'>Which environment best describes where you live?</label>
+                <div className='question-container'>
+                    <label className='question'>Which environment best describes where you live?</label>
                     <div className='row'>
                         <div className='home-radio-option column'>
                         <img src="/public/assets/formhomeicons/remote.svg" alt='Rural/Remote Icon'/>
@@ -156,9 +156,9 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                         </div>
                     </div>
                 </div>
-                <div className='home-question-container'>
-                    <label className='home-question'>Does your home have any size restrictions for dogs?</label>
-                    <div id= "size-restrictions" className='row'>
+                <div className='question-container'>
+                    <label className='question'>Does your home have any size restrictions for dogs?</label>
+                    <div className='row yes-no-inputs'>
                         <label>
                         <input 
                             type="radio" 
