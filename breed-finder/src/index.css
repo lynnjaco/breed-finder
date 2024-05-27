@@ -16,6 +16,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+h4 {
+  color: rgb(94, 94, 99);
+}
+
 a {
   text-decoration: none;
   color: var(--yinmn-blue);
@@ -85,10 +89,7 @@ body {
   }
   
 }
-
-
 .question-container {
-  align-items: first baseline;
   margin: 15px 0px;
 }
 
@@ -97,3 +98,4 @@ body {
   font-size: 14px;
   color: #ee6c4dff;
 }
+
