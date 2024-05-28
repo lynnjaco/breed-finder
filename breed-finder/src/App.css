@@ -54,6 +54,10 @@ button:hover {
   background-color: var(--burnt-sienna);
 }
 
+h5 {
+  margin-top: 50px;
+}
+
 /* Home Component */
 
 #home-container {
@@ -109,12 +113,13 @@ button:hover {
 .form-container {
   width: 900px;
   height: 600px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding: 50px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   border-radius: 10px;
+  box-shadow: 2px 2px 5px rgb(139, 139, 139);
 }
 
 .page-indicator-container {

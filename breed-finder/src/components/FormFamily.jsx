@@ -4,20 +4,52 @@ export default function FormFamily({ userResponse, setUserResponse }) {
 
     function handleFamilyQuantityChange(e) {
         setUserResponse(prevUserRespState => ({
-            ...prevUserRespState, household: { ...prevUserRespState.household, quantity: e.target.value }
+            ...prevUserRespState, 
+                household: { ...prevUserRespState.household, 
+                    quantity: e.target.value }
         }));
     }
 
     function handleYoungChildrenChange(e) {
         setUserResponse(prevUserRespState => ({
-            ...prevUserRespState, household: { ...prevUserRespState.household, youngChildren: e.target.value }
+            ...prevUserRespState, 
+                household: { ...prevUserRespState.household,
+                    youngChildren: e.target.value }
         }));
     }
 
     function handleAllergiesChange(e) {
         setUserResponse(prevUserRespState => ({
-            ...prevUserRespState, household: { ...prevUserRespState.household, allergies: e.target.value }
+            ...prevUserRespState, 
+                household: { ...prevUserRespState.household, 
+                    allergies: e.target.value }
         }));
+    }
+
+    function handleOtherPetsChange(e) {
+        setUserResponse(prevUserRespState => ({
+            ...prevUserRespState, 
+                household: { ...prevUserRespState.household,
+                    otherPets: { ...prevUserRespState.household.otherPets,
+                        yesNo: e.target.value,
+                        dog: e.target.value === "No" ? false : "",
+                        cat: e.target.value === "No" ? false : "",
+                        bird: e.target.value === "No" ? false : "",
+                        rodent: e.target.value === "No" ? false : "",
+                        livestock: e.target.value === "No" ? false : "",
+                        other: e.target.value === "No" ? false : "" }
+                }
+        }))
+    }
+
+    function handleAnimalSelect(e) {
+        setUserResponse(prevUserRespState => ({
+            ...prevUserRespState, 
+                household: { ...prevUserRespState.household,
+                    otherPets: { ...prevUserRespState.household.otherPets,
+                        [e.target.value]: prevUserRespState["household"]["otherPets"][e.target.value] ? false : true }
+                 }
+        }))
     }
 
     return (
@@ -32,7 +64,7 @@ export default function FormFamily({ userResponse, setUserResponse }) {
                 <div className='page-indicator background-normal'><h3 className='right-in-the-middle form-section-number-grey'>5</h3></div>
             </div>
 
-            <h4>Dogs come with lots of love, and lots of responsibilities!<br/>To ensure your Perfect Pup fits seamlessly into your existing family, we need to understand what your household looks like.</h4>
+            <h5>Dogs come with lots of love, and lots of responsibilities!<br/>To ensure your Perfect Pup fits seamlessly into your existing family, we need to understand what your household looks like.</h5>
 
             <form className='column'>
                 <div className='column'> 
@@ -99,60 +131,78 @@ export default function FormFamily({ userResponse, setUserResponse }) {
                             type="radio"
                             name="otherPets"
                             value="Yes"
+                            onChange={ handleOtherPetsChange }
+                            checked={ userResponse.household.otherPets.yesNo === "Yes" }
                         /><br/>Yes</label>
 
-                        {userResponse.household.otherPets.check === "Yes" && (
+                        <label>
+                        <input
+                            type="radio"
+                            name="otherPets"
+                            value="No"
+                            onChange={ handleOtherPetsChange }
+                            checked={userResponse.household.otherPets.yesNo === "No"}
+                        /><br/>No</label>
+                </div>
+
+                        { userResponse.household.otherPets.yesNo === "Yes" && (
                             <>
-                                <label>Dog(s)
+                                <label>Dog
                                 <input
                                     type="checkbox"
                                     name="otherAnimals"
+                                    value="dog"
+                                    onChange={ handleAnimalSelect }
                                 /></label>
 
-                                <label>Cat(s)
+                                <label>Cat
                                 <input
                                     type="checkbox"
                                     name="otherAnimals"
+                                    value="cat"
+                                    onChange={ handleAnimalSelect }
+                                /></label>
+                                
+                                <label>Bird
+                                <input
+                                    type="checkbox"
+                                    name="otherAnimals"
+                                    value="bird"
+                                    onChange={ handleAnimalSelect }
                                 /></label>
 
-                                <label>Bird(s)
+                                <label>Rodent
                                 <input
                                     type="checkbox"
                                     name="otherAnimals"
+                                    value="rodent"
+                                    onChange={ handleAnimalSelect }
                                 /></label>
 
-                                <label>Rodent(s)
+                                <label>Livestock
                                 <input
                                     type="checkbox"
                                     name="otherAnimals"
-                                /></label>
-
-                                <label>Livestock(s)
-                                <input
-                                    type="checkbox"
-                                    name="otherAnimals"
+                                    value="livestock"
+                                    onChange={ handleAnimalSelect }
                                 /></label>
 
                                 <label>Other
                                 <input
                                     type="checkbox"
                                     name="otherAnimals"
+                                    value="other"
+                                    onChange={ handleAnimalSelect }
                                 /></label>
                             </>
                         )}
-                        <label>
-                        <input
-                            type="radio"
-                            name="otherPets"
-                            value="No"
-                        /><br/>No</label>
-                    </div>
-                </div>
+                        </div>
+                
 
                 <Link to="/homeinfoform"><button className='previous-button'>Previous</button></Link>
                 <Link to="/experienceform"><button className='next-button'>Next</button></Link>
             </form>
-            {/* <h3>{JSON.stringify(userResponse)}</h3> */}
+            <h3>{JSON.stringify(userResponse)}</h3>
         </div>
     );
 }

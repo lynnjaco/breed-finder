@@ -41,7 +41,7 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                 <div className='page-indicator background-normal'><h3 className='right-in-the-middle form-section-number-grey'>5</h3></div>
             </div>
 
-            <h4>Thanks, {userResponse.intro.name || "Friend"}! Some dog breeds thrive in certain living situations better than others due to their size, temperament, and activity level. Tell me about where your Perfect Pup will live...  </h4>
+            <h5>Thanks, {userResponse.intro.name || "Friend"}!<br/>Some dog breeds thrive in certain living situations better than others due to their size, temperament, and activity level.<br/>Tell me about where your Perfect Pup will live...  </h5>
 
             <form className='column center-x-axis'>
                 <div className='question-container'>
@@ -206,7 +206,7 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                 <Link to="/introform"><button className='previous-button'>Previous</button></Link>
                 <Link  to="/householdform"><button className='next-button'>Next</button></Link>
             </form>
-            <h5>{JSON.stringify(userResponse)}</h5>
+            {/* <h5>{JSON.stringify(userResponse)}</h5> */}
         </div>
     )
 }

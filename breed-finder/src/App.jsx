@@ -46,7 +46,7 @@ function App() {
       youngChildren: "",
       allergies: "",
       otherPets: {
-        check: "",
+        yesNo: "",
         dog: "",
         cat: "",
         bird: "",

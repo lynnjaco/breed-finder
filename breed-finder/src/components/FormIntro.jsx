@@ -35,7 +35,7 @@ export default function FormIntro ({ userResponse, setUserResponse }) {
                 <div className='page-indicator background-normal'><h3 className='right-in-the-middle form-section-number-grey'>5</h3></div>
             </div>
 
-            <h4>Let's start with some info about yourself...</h4>
+            <h4>Let's start with some info about you...</h4>
 
             <form className='column center-x-axis'>
                 <input type="text" className='input-box' placeholder="Name" maxlength="30" required value={ userResponse.intro.name } onChange={ handleNameChange }/> 

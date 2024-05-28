@@ -13,7 +13,7 @@ export default function FormExperience ({ userResponse, setUserResponse }) {
         <div className='form-container column'>
             <h3 className='form-section-title'>Experience</h3>
 
-            <h4>For the safety, and sanity, of you and your Perfect Pup, training is a top priority.  Some breeds are easier to train, and others require an expereinced handler/owner to bring out their best.</h4>
+            <h4>For the safety, and sanity, of you and your Perfect Pup, training is a top priority.<br/>Some breeds are easier to train, and others require an expereinced handler/owner to bring out their best.</h4>
 
             <div className='page-indicator-container row'>
                 <div className='page-indicator background-normal'><h3 className='right-in-the-middle form-section-number-grey'>1</h3></div>

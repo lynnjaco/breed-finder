@@ -15,7 +15,7 @@ export default function FormPerfectPup ({ userResponse, setUserResponse }) {
                 <div className='page-indicator background-active'><h3 className='right-in-the-middle form-section-number-active'>5</h3></div>
             </div>
 
-            <h4>Historically, dogs have been selectively bred for to have certain characterstics. These traits are continously passed on through the generations.</h4>
+            <h4>Historically, dogs have been selectively bred for to have certain characterstics.<br/>These traits are continously passed on through the generations.</h4>
 
             <form className='column center-x-axis'>
                 <label className='question'>Which quality do you want most in your Perfect Pup?</label>
