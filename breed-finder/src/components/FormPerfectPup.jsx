@@ -3,6 +3,15 @@ import "./FormPerfectPup.css"
 
 export default function FormPerfectPup ({ userResponse, setUserResponse }) {
 
+    function handleMostDesiredTraitChange(e) {
+        setUserResponse( prevUserRespState => (
+            { ...prevUserRespState,
+                perfectPup: { ...prevUserRespState.perfectPup, 
+                    mostDesiredTrait: e.target.value }
+            } 
+        ))
+    }
+
     return (
         <div className='form-container column'>
             <h3 className='form-section-title'>Perfect Pup</h3>
@@ -23,41 +32,41 @@ export default function FormPerfectPup ({ userResponse, setUserResponse }) {
                     <div className='column trait-group'>
                         {/* <p>Activity Level</p> */}
                         <img src='/public/assets/activityicon.png' alt='Activity Icon'/> 
-                        <label>Playful<input type="radio" name="mostDesiredTrait" value="Playful"/></label>
-                        <label>Calm<input type="radio" name="mostDesiredTrait" value="Calm"/></label>
-                        <label>Active<input type="radio" name="mostDesiredTrait" value="Active"/></label>
+                        <label>Playful<input type="radio" name="mostDesiredTrait" value="Playful" onChange={ handleMostDesiredTraitChange }/></label>
+                        <label>Calm<input type="radio" name="mostDesiredTrait" value="Calm" onChange={ handleMostDesiredTraitChange }/></label>
+                        <label>Active<input type="radio" name="mostDesiredTrait" value="Active" onChange={ handleMostDesiredTraitChange }/></label>
                     </div>
                     
                     <div className='column trait-group'>
                         {/* <p>Personality</p> */}
                         <img src='public/assets/personalityicon.png' alt='Personality Icon'/>
-                        <label>Friendly<input type="radio" name="mostDesiredTrait" value="Friendly"/></label>
-                        <label>Curious<input type="radio" name="mostDesiredTrait" value="Curious"/></label>
-                        <label>Loyal<input type="radio" name="mostDesiredTrait" value="Loyal"/></label>
-                        <label>Brave<input type="radio" name="mostDesiredTrait" value="Brave"/></label>
-                        <label>Cat-Like<input type="radio" name="mostDesiredTrait" value="Cat-Like"/></label>
-                        <label>Cheerful<input type="radio" name="mostDesiredTrait" value="Cheerful"/></label>
-                        <label>Independent<input type="radio" name="mostDesiredTrait" value="Independent"/></label>
-                        <label>Affectionate<input type="radio" name="mostDesiredTrait" value="Affectionate"/></label>
-                        <label>Feisty<input type="radio" name="mostDesiredTrait" value="Feisty"/></label>
-                        <label>Sensitive<input type="radio" name="mostDesiredTrait" value="Sensitive"/></label>
+                        <label>Friendly<input type="radio" name="mostDesiredTrait" value="Friendly" onChange={ handleMostDesiredTraitChange }/></label>
+                        <label>Curious<input type="radio" name="mostDesiredTrait" value="Curious" onChange={ handleMostDesiredTraitChange }/></label>
+                        <label>Loyal<input type="radio" name="mostDesiredTrait" value="Loyal" onChange={ handleMostDesiredTraitChange }/></label>
+                        <label>Brave<input type="radio" name="mostDesiredTrait" value="Brave" onChange={ handleMostDesiredTraitChange }/></label>
+                        <label>Cat-Like<input type="radio" name="mostDesiredTrait" value="Cat-Like" onChange={ handleMostDesiredTraitChange }/></label>
+                        <label>Cheerful<input type="radio" name="mostDesiredTrait" value="Cheerful" onChange={ handleMostDesiredTraitChange }/></label>
+                        <label>Independent<input type="radio" name="mostDesiredTrait" value="Independent" onChange={ handleMostDesiredTraitChange }/></label>
+                        <label>Affectionate<input type="radio" name="mostDesiredTrait" value="Affectionate" onChange={ handleMostDesiredTraitChange }/></label>
+                        <label>Feisty<input type="radio" name="mostDesiredTrait" value="Feisty" onChange={ handleMostDesiredTraitChange }/></label>
+                        <label>Sensitive<input type="radio" name="mostDesiredTrait" value="Sensitive" onChange={ handleMostDesiredTraitChange }/></label>
                     </div>
                     
                     <div className='column trait-group'>
                         <img src='/public/assets/skillicon.png' alt='Skill Icon'/>
                         {/* <p>Skill</p> */}
-                        <label>Hardworking<input type="radio" name="mostDesiredTrait" value="Hardworking"/></label>
-                        <label>Intelligent<input type="radio" name="mostDesiredTrait" value="Intelligent"/></label>
-                        <label>Protective<input type="radio" name="mostDesiredTrait" value="Protective"/></label>
-                        <label>Powerful<input type="radio" name="mostDesiredTrait" value="Powerful"/></label>
-                        <label>Compassionate<input type="radio" name="mostDesiredTrait" value="Compassionate"/></label>
+                        <label>Hardworking<input type="radio" name="mostDesiredTrait" value="Hardworking" onChange={ handleMostDesiredTraitChange }/></label>
+                        <label>Intelligent<input type="radio" name="mostDesiredTrait" value="Intelligent" onChange={ handleMostDesiredTraitChange }/></label>
+                        <label>Protective<input type="radio" name="mostDesiredTrait" value="Protective" onChange={ handleMostDesiredTraitChange }/></label>
+                        <label>Powerful<input type="radio" name="mostDesiredTrait" value="Powerful" onChange={ handleMostDesiredTraitChange }/></label>
+                        <label>Compassionate<input type="radio" name="mostDesiredTrait" value="Compassionate" onChange={ handleMostDesiredTraitChange }/></label>
                     </div>
                 </div>
             
                 <Link to="/experienceform"><button className='previous-button'>Previous</button></Link>
                 <Link  to="/results"><button className='next-button'>Results</button></Link>
             </form>
-            {/* <h3>{JSON.stringify(userResponse)}</h3> */}
+            <h5>{JSON.stringify(userResponse)}</h5>
         </div>
     )
 }

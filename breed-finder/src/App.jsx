@@ -61,7 +61,6 @@ function App() {
     },
     perfectPup: {
       mostDesiredTrait: "",
-      leastDesiredTrait: ""
     }
   }
 
