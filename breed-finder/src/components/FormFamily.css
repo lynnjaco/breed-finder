@@ -1,0 +1,11 @@
+.animal-option-container {
+    margin: 5px 20px;
+}
+
+.animal-icon{
+    height: 50px;
+}
+
+.animal-name {
+    font-size: 12px;
+}

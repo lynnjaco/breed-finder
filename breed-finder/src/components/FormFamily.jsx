@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import "./FormFamily.css"
 
 export default function FormFamily({ userResponse, setUserResponse }) {
 
@@ -146,55 +147,73 @@ export default function FormFamily({ userResponse, setUserResponse }) {
                 </div>
 
                         { userResponse.household.otherPets.yesNo === "Yes" && (
-                            <>
-                                <label>Dog
-                                <input
-                                    type="checkbox"
-                                    name="otherAnimals"
-                                    value="dog"
-                                    onChange={ handleAnimalSelect }
-                                /></label>
+                            <div className='row'>
+                                <div className='animal-option-container column'>
+                                    <img className="animal-icon" src="/public/assets/formfamilyicons/dogicon.svg" alt='Dog Icon'/>
+                                    <label className='animal-name'>
+                                    <input
+                                        type="checkbox"
+                                        name="otherAnimals"
+                                        value="dog"
+                                        onChange={ handleAnimalSelect }
+                                    /><br/>Dog</label>
+                                </div>
 
-                                <label>Cat
-                                <input
-                                    type="checkbox"
-                                    name="otherAnimals"
-                                    value="cat"
-                                    onChange={ handleAnimalSelect }
-                                /></label>
+                                <div className='animal-option-container column'>
+                                    <img className="animal-icon" src="/public/assets/formfamilyicons/caticon.svg" alt='Cat Icon'/>
+                                    <label className='animal-name'>
+                                    <input
+                                        type="checkbox"
+                                        name="otherAnimals"
+                                        value="cat"
+                                        onChange={ handleAnimalSelect }
+                                    /><br/>Cat</label>
+                                </div>
                                 
-                                <label>Bird
-                                <input
-                                    type="checkbox"
-                                    name="otherAnimals"
-                                    value="bird"
-                                    onChange={ handleAnimalSelect }
-                                /></label>
+                                <div className='animal-option-container column'>
+                                    <img className="animal-icon" src="/public/assets/formfamilyicons/birdicon.svg" alt='Bird Icon'/>
+                                    <label className='animal-name'>
+                                    <input
+                                        type="checkbox"
+                                        name="otherAnimals"
+                                        value="bird"
+                                        onChange={ handleAnimalSelect }
+                                    /><br/>Bird</label>
+                                </div>
 
-                                <label>Rodent
-                                <input
-                                    type="checkbox"
-                                    name="otherAnimals"
-                                    value="rodent"
-                                    onChange={ handleAnimalSelect }
-                                /></label>
+                                <div className='animal-option-container column'>
+                                    <img className="animal-icon" src="/public/assets/formfamilyicons/rodenticon.svg" alt='Rodent Icon'/>
+                                    <label className='animal-name'>
+                                    <input
+                                        type="checkbox"
+                                        name="otherAnimals"
+                                        value="rodent"
+                                        onChange={ handleAnimalSelect }
+                                    /><br/>Rodent</label>
+                                </div>
 
-                                <label>Livestock
-                                <input
-                                    type="checkbox"
-                                    name="otherAnimals"
-                                    value="livestock"
-                                    onChange={ handleAnimalSelect }
-                                /></label>
+                                <div className='animal-option-container column'>
+                                    <img className="animal-icon" src="/public/assets/formfamilyicons/livestockicon.svg" alt='Livestock Icon'/>
+                                    <label className='animal-name'>
+                                    <input
+                                        type="checkbox"
+                                        name="otherAnimals"
+                                        value="livestock"
+                                        onChange={ handleAnimalSelect }
+                                    /><br/>Livestock</label>
+                                </div>
 
-                                <label>Other
-                                <input
-                                    type="checkbox"
-                                    name="otherAnimals"
-                                    value="other"
-                                    onChange={ handleAnimalSelect }
-                                /></label>
-                            </>
+                                <div className='animal-option-container column'>
+                                    <img className="animal-icon" src="/public/assets/formfamilyicons/othericon.svg" alt='Other Animal Icon'/>
+                                    <label className='animal-name'>
+                                    <input
+                                        type="checkbox"
+                                        name="otherAnimals"
+                                        value="other"
+                                        onChange={ handleAnimalSelect }
+                                    /><br/>Other</label>
+                                </div>
+                            </div>
                         )}
                         </div>
                 
@@ -202,7 +221,7 @@ export default function FormFamily({ userResponse, setUserResponse }) {
                 <Link to="/homeinfoform"><button className='previous-button'>Previous</button></Link>
                 <Link to="/experienceform"><button className='next-button'>Next</button></Link>
             </form>
-            <h3>{JSON.stringify(userResponse)}</h3>
+            {/* <h3>{JSON.stringify(userResponse)}</h3> */}
         </div>
     );
 }
