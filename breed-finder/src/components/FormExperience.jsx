@@ -3,9 +3,19 @@ import "./FormExperience.css"
 
 export default function FormExperience ({ userResponse, setUserResponse }) {
 
+    function handlePastDogsCountChange(e){
+        setUserResponse( prevUserRespState => (
+            {...prevUserRespState, 
+                experience: { ...prevUserRespState.experience, 
+                    pastDogs: e.target.value }
+        }))   
+    }
+
     function handleTrainingLevelChange(e){
         setUserResponse( prevUserRespState => (
-            {...prevUserRespState, experience: { ...prevUserRespState.homeInfo, trainingAbility: e.target.value }
+            {...prevUserRespState, 
+                experience: { ...prevUserRespState.experience, 
+                    trainingAbility: e.target.value }
         }))   
     }
 
@@ -26,7 +36,11 @@ export default function FormExperience ({ userResponse, setUserResponse }) {
             <form className='column center-x-axis'>
                 <div className='question-container column'>
                     <label className='question'>How many dogs have you owned in the past?</label>
-                    <input type="number" min="0" className='input-box narrow-input'/>
+                    <input 
+                        type="number" 
+                        min="0" 
+                        className='input-box narrow-input'
+                        onChange={ handlePastDogsCountChange }/>
                 </div>
 
                 <div className='question-container column'>
@@ -35,27 +49,46 @@ export default function FormExperience ({ userResponse, setUserResponse }) {
                         <div id="training-options" className='row'>
                             <div className='column'>
                                 <img src="/public/assets/beginnerlevel.png" alt="No Experience Icon"/>
-                                <label><input type="radio" name="trainerLevel" value="none"/>
+                                <label><input 
+                                            type="radio" 
+                                            name="trainerLevel" 
+                                            value="none"
+                                            onChange={ handleTrainingLevelChange }
+                                            />
                                 <br/>Non-Existent<br/><span className='subtext'>"I've never trained a dog."</span></label>
                             </div>
 
                             <div className='column'>
                                 <img src="/public/assets/novicelevel.png" alt="Beginner Experience Icon"/>
-                                <label><input type="radio" name="trainerLevel" value="beginner"/>
+                                <label><input 
+                                            type="radio" 
+                                            name="trainerLevel" 
+                                            value="beginner"
+                                            onChange={ handleTrainingLevelChange }
+                                            />
                                 <br/>Beginner<br/><span className='subtext'>"I've trained one or two dogs."</span></label>
                             </div>
 
                             <div className='column'>
                                 <img src="/public/assets/interlevel.png" alt="Intermediate Experience Icon"/>
-
-                                <label><input type="radio" name="trainerLevel" value="intermediate"/>
+                                <label><input 
+                                            type="radio" 
+                                            name="trainerLevel" 
+                                            value="intermediate"
+                                            onChange={ handleTrainingLevelChange }
+                                            />
                                 <br/>Intermediate<br/><span className='subtext'>"I've trained three or four dogs."</span></label>
                             </div>
                                 
                             <div className='column'>
                                 <img src="/public/assets/expertlevel.png" alt="Expert Experience Icon"/>
 
-                                <label><input type="radio" name="trainerLevel" value="professional"/>
+                                <label><input 
+                                            type="radio" 
+                                            name="trainerLevel" 
+                                            value="professional"
+                                            onChange={ handleTrainingLevelChange }
+                                            />
                                 <br/>Professional<br/><span className='subtext'>"I've trained more than five dogs."</span></label>
                             </div>
                     </div>
