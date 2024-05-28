@@ -5,20 +5,27 @@ import "./FormHomeInfo.css"
 export default function FormHomeInfo ({ userResponse, setUserResponse }) {
     function handleDwellingChange(e){
         setUserResponse( prevUserRespState => (
-            {...prevUserRespState, homeInfo: { ...prevUserRespState.homeInfo, dwelling: e.target.value }
+            {...prevUserRespState, 
+                homeInfo: { ...prevUserRespState.homeInfo, 
+                    dwelling: e.target.value }
         }))   
     }
 
     function handleEnvironmentChange(e){
         setUserResponse( prevUserRespState => (
-            {...prevUserRespState, homeInfo: { ...prevUserRespState.homeInfo, environment: e.target.value }
+            {...prevUserRespState, 
+                homeInfo: { ...prevUserRespState.homeInfo, 
+                    environment: e.target.value }
         }))   
     }
 
     function handleSizeRestrictionChange(e){
-        e.preventDefault();
         setUserResponse( prevUserRespState => (
-            {...prevUserRespState, homeInfo: { ...prevUserRespState.homeInfo, sizeRestriction: {...prevUserRespState.homeInfo.sizeRestriction, yesNo: e.target.value } }
+            {...prevUserRespState, 
+                homeInfo: { ...prevUserRespState.homeInfo, 
+                    sizeRestriction: {...prevUserRespState.homeInfo.sizeRestriction, 
+                        yesNo: e.target.value,
+                        maxWeight: e.target.value === "No" ? Infinity : prevUserRespState.homeInfo.sizeRestriction.maxWeight }}
         }))   
     }
 
@@ -173,9 +180,10 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                                     type="number"
                                     name="maxWeight"
                                     className='input-box narrow-input'
-                                    placeholder="Max Permitted Weight"
-                                    min="1"
+                                    placeholder="Max Weight (lbs)"
+                                    min="10"
                                     max="200"
+                                    step="10"
                                     value={ userResponse.homeInfo.sizeRestriction.maxWeight }
                                     onChange={(e) => setUserResponse(prevUserRespState => ({
                                         ...prevUserRespState, homeInfo: { ...prevUserRespState.homeInfo, sizeRestriction:{ ...prevUserRespState.homeInfo.sizeRestriction, maxWeight: e.target.value } }
@@ -188,7 +196,7 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                             type="radio" 
                             name="sizeRestriction" 
                             value="No" 
-                            checked={ userResponse.homeInfo.sizeRestriction.maxWeight === Infinity }
+                            checked={ userResponse.homeInfo.sizeRestriction.yesNo === "No" }
                             onChange={ handleSizeRestrictionChange }
                         /><br/>No</label>
                     </div>
@@ -198,7 +206,7 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                 <Link to="/introform"><button className='previous-button'>Previous</button></Link>
                 <Link  to="/householdform"><button className='next-button'>Next</button></Link>
             </form>
-            {/* <h3>{JSON.stringify(userResponse)}</h3> */}
+            <h5>{JSON.stringify(userResponse)}</h5>
         </div>
     )
 }
