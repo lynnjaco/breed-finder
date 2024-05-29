@@ -66,7 +66,7 @@ export default function FormPerfectPup ({ userResponse, setUserResponse }) {
                 <Link to="/experienceform"><button className='previous-button'>Previous</button></Link>
                 <Link  to="/results"><button className='next-button'>Results</button></Link>
             </form>
-            <h5>{JSON.stringify(userResponse)}</h5>
+            {/* <h5>{JSON.stringify(userResponse)}</h5> */}
         </div>
     )
 }

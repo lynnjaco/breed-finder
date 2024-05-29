@@ -1,12 +1,12 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 // Styling
 import './App.css'
 
 // Data
-import getAllDogsList from './api/dogfetch';
+import listDogBreeds from './api/dogfetch';
 
 // General Components
 import Home from './components/Home';
@@ -24,7 +24,15 @@ import Footer from './components/Footer';
 
 function App() {
 
-  const [allDogBreeds, setAllDogBreeds] = useState([]);
+  const [breedList, setBreedList] = useState([]);
+
+  useEffect(() => {
+    listDogBreeds()
+    .then(res => {
+      setBreedList(res);
+      console.log(res);
+    })
+  }, [])
 
   const initialResponse = {
     intro: {
@@ -78,7 +86,7 @@ function App() {
           <Route path="/householdform" element={ <FormFamily userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
           <Route path="/experienceform" element={ <FormExperience userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
           <Route path="/perfectpupform" element={ <FormPerfectPup userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
-          <Route path="/results" element={ <Results userResponse={ userResponse }/> }/>
+          <Route path="/results" element={ <Results userResponse={ userResponse } breedList={ breedList } setBreedList={ setBreedList } /> }/>
         </Routes>
         </div>
         <Footer />
