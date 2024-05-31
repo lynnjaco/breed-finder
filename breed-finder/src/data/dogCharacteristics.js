@@ -1,4 +1,4 @@
-export const dogCharacteristics = {
+const dogCharacteristics = {
     active: [
       "Active", "Energetic", "Lively", "Spirited", "Agile", "Fast", "Athletic", "Boisterous"
     ],
@@ -36,7 +36,7 @@ export const dogCharacteristics = {
       "Hardworking", "Determined", "Diligent", "Tenacious", "Willful", "Dutiful"
     ],
     protective: [
-      "Territorial", "Suspicious", "Watchful", "Vigilant", "Protective"
+      "Territorial", "Suspicious", "Watchful", "Vigilant", "Protective", "Alert"
     ],
     feisty: [
       "Mischievous", "Feisty", "Spunky", "Vocal"
@@ -54,3 +54,5 @@ export const dogCharacteristics = {
       "Sensitive", "Trusting", "Cautious"
     ]
   };
+
+  export default dogCharacteristics;

@@ -38,10 +38,10 @@ export default function FormIntro ({ userResponse, setUserResponse }) {
             <h4>Let's start with some info about you...</h4>
 
             <form className='column center-x-axis'>
-                <input type="text" className='input-box' placeholder="Name" maxlength="30" required value={ userResponse.intro.name } onChange={ handleNameChange }/> 
+                <input type="text" className='input-box' placeholder="Name" maxLength="30" required value={ userResponse.intro.name } onChange={ handleNameChange }/> 
                 <input type="email" className='input-box' placeholder="Email Address" value={ userResponse.intro.email } onChange={ handleEmailChange }/>
                 <input type="number" className='input-box narrow-input' min="1" max="130" placeholder="Age" value={ userResponse.intro.age } onChange={ handleAgeChange }/>
-                <input type="text" className='input-box narrow-input' placeholder="Zip Code" maxlength="5" value={ userResponse.intro.zipCode } onChange={ handleZipCodeChange }/>
+                <input type="text" className='input-box narrow-input' placeholder="Zip Code" maxLength="5" value={ userResponse.intro.zipCode } onChange={ handleZipCodeChange }/>
                 <Link to="/homeinfoform"><button className='next-button'>Next</button></Link>
             </form>
             {/* <h3>{JSON.stringify(userResponse)}</h3> */}

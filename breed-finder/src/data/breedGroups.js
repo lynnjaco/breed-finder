@@ -1,4 +1,4 @@
-export const breedGroups = [
+const breedGroups = [
     "Toy",
     "Hound",
     "Herding",
