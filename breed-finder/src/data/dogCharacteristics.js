@@ -14,7 +14,7 @@ const dogCharacteristics = {
     brave: [
       "Brave", "Courageous", "Fearless", "Confident", "Self-assured", "Strong-willed", "Assertive", "Bold"
     ],
-    palyful: [
+    playful: [
       "Playful", "Fun-loving", "Clownish", "Merry", "Bubbly", "Joyful", "Cheerful"
     ],
     affectionate: [

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-// import getDogImage from "../api/dogfetch";
+import { Link } from 'react-router-dom';
 import "./Results.css"
 import calculateBreedScores from "../utilities/sortBreedList"
 
@@ -12,7 +12,7 @@ export default function Results({ userResponse, breedList, setBreedList}) {
     }, []);
     
     const mostCompatibleBreed = breedList[0];
-    const runnerUpCompatibleBreeds = breedList.slice(1, 4);
+    const runnerUpCompatibleBreeds = breedList.slice(1, 5);
 
     function getDogImageURL(id){
         fetch("https://api.thedogapi.com/v1/images/" + id)
@@ -32,19 +32,22 @@ export default function Results({ userResponse, breedList, setBreedList}) {
                 <p>{ mostCompatibleBreed.temperament.split(", ").join(" - ") || "Temperament Not Loaded"}</p>
             </div>
 
-            <h3>Runner Ups</h3>
+            <h4>You Might Also Want To Consider...</h4>
 
             <div className="row" id="runner-up-container">
                 { runnerUpCompatibleBreeds.map(el => (
                     <div>
                         <p key={ el.id }> { el.name } </p>
-                        <img />
+                        <img src={ getDogImageURL(runnerUpCompatibleBreeds.reference_image_id) } alt="Dog Image"/>
                         <p>{ el.breed_group }</p>
-                        <p>{  el.life_span }</p>
+                        <p>Life Span: { el.life_span }</p>
                         <p>{ el.temperament.split(", ").slice(0, 3).join(" - ") }</p>
                     </div>
                 ))}
             </div>
+
+            <Link to="/perfectpupform"><button className='previous-button'>Previous</button></Link>
+            <Link  to="/introform"><button className='next-button'>Start Over</button></Link>
             {/* <h4>{JSON.stringify(userResponse)}</h4> */}
         </div>
     )
