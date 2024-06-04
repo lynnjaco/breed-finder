@@ -6,8 +6,7 @@ import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-route
 import './App.css'
 
 // Data
-import listDogBreeds from './api/dogfetch';
-// import dogCharacteristics from "src/data/dogCharacteristics.js"
+import { listDogBreeds, getBreedInfo } from './api/dogfetch';
 
 // General Components
 import Home from './components/Home';
@@ -21,12 +20,23 @@ import FormExperience from './components/FormExperience';
 import FormPerfectPup from './components/FormPerfectPup';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import BreedPage from './components/BreedPage';
 
 
 function App() {
 
   const [breedList, setBreedList] = useState([]);
-
+  const [breedInfo, setBreedInfo] = useState("");
+  const [breedObject, setBreedObject] = useState("");
+  
+  function getImageURL(id){
+      fetch("https://api.thedogapi.com/v1/images/" + id)
+      .then(response => response.json())
+      .then(res => {
+        setBreedObject(res);
+      })
+  }
+  
   useEffect(() => {
     listDogBreeds()
     .then(res => {
@@ -86,7 +96,8 @@ function App() {
           <Route path="/householdform" element={ <FormFamily userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
           <Route path="/experienceform" element={ <FormExperience userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
           <Route path="/perfectpupform" element={ <FormPerfectPup userResponse={ userResponse } setUserResponse={ setUserResponse } /> } />
-          <Route path="/results" element={ <Results userResponse={ userResponse } breedList={ breedList } setBreedList={ setBreedList }/> }/>
+          <Route path="/results" element={ <Results userResponse={ userResponse } breedList={ breedList } setBreedList={ setBreedList } breedInfo={ breedInfo } setBreedInfo={ setBreedInfo }  getImageURL={ getImageURL } breedObject={ breedObject }/> }/>
+          <Route path='/breedinfo/:id' element={ <BreedPage breedInfo={ breedInfo }/>}/>
         </Routes>
         </div>
         <Footer />
