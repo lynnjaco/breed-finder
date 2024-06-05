@@ -142,12 +142,12 @@ export default function calculateBreedScores( { dogBreeds, userResponse } ) {
         if (userResponse.household.otherPets.bird) {
             dogCharacteristics.catLike.forEach(el => { if (breed.temperament && breed.temperament.includes(el)) score -= 100 });
             if (breed.breed_group && ['sporting', 'hunting', 'terrier', 'hound'].includes(breed.breed_group.toLowerCase())) score -= 50;
-            if (breed.breed_group && ['bird', 'hunt'].some(el => breed.bred_for.includes(el))) score -= 100;
+            if (breed.breed_group && ['bird', 'hunt'].some(el => breed.bred_for && breed.bred_for.includes(el))) score -= 100;
         }
         if (userResponse.household.otherPets.rodent) {
             dogCharacteristics.catLike.forEach(el => { if (breed.temperament && breed.temperament.includes(el)) score -= 500 });
             if (breed.breed_group && ['sporting', 'hunting', 'terrier', 'hound'].includes(breed.breed_group.toLowerCase())) score -= 500;
-            if (breed.breed_group && ['rodent', 'vermin', 'hunt'].some(el => breed.bred_for.includes(el))) score -= 500;
+            if (breed.breed_group && ['rodent', 'vermin', 'hunt'].some(el => breed.bred_for && breed.bred_for.includes(el))) score -= 500;
         }
         if (userResponse.household.otherPets.livestock) {
           dogCharacteristics.protective.forEach(el => { if (breed.temperament && breed.temperament.includes(el)) score += 100 });
