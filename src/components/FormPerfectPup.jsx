@@ -31,7 +31,7 @@ export default function FormPerfectPup ({ userResponse, setUserResponse }) {
                 <div className='row' id='trait-container'>
                     <div className='column trait-group'>
                         {/* <p>Activity Level</p> */}
-                        <img src='//assets/activityicon.png' alt='Activity Icon'/> 
+                        <img src='/assets/activityicon.png' alt='Activity Icon'/> 
                         <label>Playful<input type="radio" name="mostDesiredTrait" value="Playful" onChange={ handleMostDesiredTraitChange }/></label>
                         <label>Calm<input type="radio" name="mostDesiredTrait" value="Calm" onChange={ handleMostDesiredTraitChange }/></label>
                         <label>Active<input type="radio" name="mostDesiredTrait" value="Active" onChange={ handleMostDesiredTraitChange }/></label>
@@ -53,7 +53,7 @@ export default function FormPerfectPup ({ userResponse, setUserResponse }) {
                     </div>
                     
                     <div className='column trait-group'>
-                        <img src='//assets/skillicon.png' alt='Skill Icon'/>
+                        <img src='/assets/skillicon.png' alt='Skill Icon'/>
                         {/* <p>Skill</p> */}
                         <label>Hardworking<input type="radio" name="mostDesiredTrait" value="Hardworking" onChange={ handleMostDesiredTraitChange }/></label>
                         <label>Intelligent<input type="radio" name="mostDesiredTrait" value="Intelligent" onChange={ handleMostDesiredTraitChange }/></label>
