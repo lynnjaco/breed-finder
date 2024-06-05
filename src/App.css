@@ -13,7 +13,7 @@
 }
 
 #content-container {
-  background-image: url("public/assets/bgphoto.png");
+  background-image: url("/assets/bgphoto.png");
   opacity: 90%;
   color: var(--gunmetal);
   width: 100%;

@@ -48,7 +48,7 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                     <label className='question'>Which dwelling best describes your home type?</label>
                     <div className='dwelling-question'>
                         <div className='home-radio-option column'>
-                            <img src="/public/assets/formhomeicons/townhouseicon.svg" alt='Townhouse Icon'/>
+                            <img src="//assets/formhomeicons/townhouseicon.svg" alt='Townhouse Icon'/>
                             <label>
                             <input 
                                 type="radio" 
@@ -60,7 +60,7 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                         </div>
 
                         <div className='home-radio-option column'>
-                        <img src="/public/assets/formhomeicons/house.svg" alt='House Icon'/>
+                        <img src="//assets/formhomeicons/house.svg" alt='House Icon'/>
                             <label>
                             <input 
                                 type="radio" 
@@ -72,7 +72,7 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                         </div>
 
                         <div className='home-radio-option column'>
-                            <img src="/public/assets/formhomeicons/apartmenticon.svg" alt='Apartment Icon'/>
+                            <img src="//assets/formhomeicons/apartmenticon.svg" alt='Apartment Icon'/>
                             <label>
                             <input 
                                 type="radio" 
@@ -84,7 +84,7 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                         </div>
 
                         <div className='home-radio-option column'>
-                        <img src="/public/assets/formhomeicons/apartmentplusicon.svg" alt='Large Apartment Icon'/>
+                        <img src="//assets/formhomeicons/apartmentplusicon.svg" alt='Large Apartment Icon'/>
                             <label> 
                             <input 
                                 type="radio" 
@@ -96,7 +96,7 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                         </div>
 
                         <div className='home-radio-option column'>
-                        <img src="/public/assets/formhomeicons/rv.svg" alt='Mobile Home/RV Icon'/>
+                        <img src="//assets/formhomeicons/rv.svg" alt='Mobile Home/RV Icon'/>
 
                             <label>
                             <input 
@@ -109,7 +109,7 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                         </div>
 
                         <div className='home-radio-option column'>
-                            <img src="/public/assets/formhomeicons/tinyhouse.svg" alt='Tiny House Icon'/>
+                            <img src="//assets/formhomeicons/tinyhouse.svg" alt='Tiny House Icon'/>
                             <label>
                             <input 
                                 type="radio" 
@@ -127,7 +127,7 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                     <label className='question'>Which environment best describes where you live?</label>
                     <div className='row'>
                         <div className='home-radio-option column'>
-                        <img src="/public/assets/formhomeicons/remote.svg" alt='Rural/Remote Icon'/>
+                        <img src="//assets/formhomeicons/remote.svg" alt='Rural/Remote Icon'/>
                             <label>
                             <input 
                                 type="radio" 
@@ -139,7 +139,7 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                         </div>
 
                         <div className='home-radio-option column'>
-                        <img src="/public/assets/formhomeicons/city.svg" alt='City Icon'/>
+                        <img src="//assets/formhomeicons/city.svg" alt='City Icon'/>
                             <label>
                             <input 
                                 type="radio" 
@@ -151,7 +151,7 @@ export default function FormHomeInfo ({ userResponse, setUserResponse }) {
                         </div>
 
                         <div className='home-radio-option column'>
-                        <img src="/public/assets/formhomeicons/suburbs.svg" alt='Suburbs Icon'/>
+                        <img src="//assets/formhomeicons/suburbs.svg" alt='Suburbs Icon'/>
                             <label>
                             <input 
                                 type="radio" 

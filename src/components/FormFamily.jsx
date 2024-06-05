@@ -149,7 +149,7 @@ export default function FormFamily({ userResponse, setUserResponse }) {
                         { userResponse.household.otherPets.yesNo === "Yes" && (
                             <div className='row'>
                                 <div className='animal-option-container column'>
-                                    <img className="animal-icon" src="/public/assets/formfamilyicons/dogicon.svg" alt='Dog Icon'/>
+                                    <img className="animal-icon" src="//assets/formfamilyicons/dogicon.svg" alt='Dog Icon'/>
                                     <label className='animal-name'>
                                     <input
                                         type="checkbox"
@@ -160,7 +160,7 @@ export default function FormFamily({ userResponse, setUserResponse }) {
                                 </div>
 
                                 <div className='animal-option-container column'>
-                                    <img className="animal-icon" src="/public/assets/formfamilyicons/caticon.svg" alt='Cat Icon'/>
+                                    <img className="animal-icon" src="//assets/formfamilyicons/caticon.svg" alt='Cat Icon'/>
                                     <label className='animal-name'>
                                     <input
                                         type="checkbox"
@@ -171,7 +171,7 @@ export default function FormFamily({ userResponse, setUserResponse }) {
                                 </div>
                                 
                                 <div className='animal-option-container column'>
-                                    <img className="animal-icon" src="/public/assets/formfamilyicons/birdicon.svg" alt='Bird Icon'/>
+                                    <img className="animal-icon" src="//assets/formfamilyicons/birdicon.svg" alt='Bird Icon'/>
                                     <label className='animal-name'>
                                     <input
                                         type="checkbox"
@@ -182,7 +182,7 @@ export default function FormFamily({ userResponse, setUserResponse }) {
                                 </div>
 
                                 <div className='animal-option-container column'>
-                                    <img className="animal-icon" src="/public/assets/formfamilyicons/rodenticon.svg" alt='Rodent Icon'/>
+                                    <img className="animal-icon" src="//assets/formfamilyicons/rodenticon.svg" alt='Rodent Icon'/>
                                     <label className='animal-name'>
                                     <input
                                         type="checkbox"
@@ -193,7 +193,7 @@ export default function FormFamily({ userResponse, setUserResponse }) {
                                 </div>
 
                                 <div className='animal-option-container column'>
-                                    <img className="animal-icon" src="/public/assets/formfamilyicons/livestockicon.svg" alt='Livestock Icon'/>
+                                    <img className="animal-icon" src="//assets/formfamilyicons/livestockicon.svg" alt='Livestock Icon'/>
                                     <label className='animal-name'>
                                     <input
                                         type="checkbox"
@@ -204,7 +204,7 @@ export default function FormFamily({ userResponse, setUserResponse }) {
                                 </div>
 
                                 <div className='animal-option-container column'>
-                                    <img className="animal-icon" src="/public/assets/formfamilyicons/othericon.svg" alt='Other Animal Icon'/>
+                                    <img className="animal-icon" src="//assets/formfamilyicons/othericon.svg" alt='Other Animal Icon'/>
                                     <label className='animal-name'>
                                     <input
                                         type="checkbox"

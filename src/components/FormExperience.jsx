@@ -48,7 +48,7 @@ export default function FormExperience ({ userResponse, setUserResponse }) {
                     <p className='subtext'>"Trained" is defined as house trained, leash trained, and able to follow basic commands: "sit", "stay", "come", "down", "drop it".</p>
                         <div id="training-options" className='row'>
                             <div className='column'>
-                                <img src="/public/assets/beginnerlevel.png" alt="No Experience Icon"/>
+                                <img src="//assets/beginnerlevel.png" alt="No Experience Icon"/>
                                 <label><input 
                                             type="radio" 
                                             name="trainerLevel" 
@@ -59,7 +59,7 @@ export default function FormExperience ({ userResponse, setUserResponse }) {
                             </div>
 
                             <div className='column'>
-                                <img src="/public/assets/novicelevel.png" alt="Beginner Experience Icon"/>
+                                <img src="//assets/novicelevel.png" alt="Beginner Experience Icon"/>
                                 <label><input 
                                             type="radio" 
                                             name="trainerLevel" 
@@ -70,7 +70,7 @@ export default function FormExperience ({ userResponse, setUserResponse }) {
                             </div>
 
                             <div className='column'>
-                                <img src="/public/assets/interlevel.png" alt="Intermediate Experience Icon"/>
+                                <img src="//assets/interlevel.png" alt="Intermediate Experience Icon"/>
                                 <label><input 
                                             type="radio" 
                                             name="trainerLevel" 
@@ -81,7 +81,7 @@ export default function FormExperience ({ userResponse, setUserResponse }) {
                             </div>
                                 
                             <div className='column'>
-                                <img src="/public/assets/expertlevel.png" alt="Expert Experience Icon"/>
+                                <img src="//assets/expertlevel.png" alt="Expert Experience Icon"/>
 
                                 <label><input 
                                             type="radio" 
